@@ -12,7 +12,7 @@ function Landing({words, articles}) {
       <div className='w-full mt-5'>
         <div className='flex flex-row-reverse items-center'>
         <h1 className="flex justify-end text-2xl items-center"> &nbsp;  :لغت روز </h1>
-        <h2 className="flex flex-row-reverse text-2xl  justify-end items-center" dir='rtl'>{words[0].fields.Word}{words[0].fields.PoSpeach}</h2>
+        <h2 className="flex flex-row-reverse text-2xl  justify-end items-center" dir='rtl'>{words[0].fields.Word}{words[0].fields.Abbr}</h2>
         </div>
         <p className="text-right text-2xl my-2">{words[0].fields.Description}</p>
         <div className ='w-full flex justify-center mt-10'>

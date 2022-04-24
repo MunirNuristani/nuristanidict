@@ -2,11 +2,12 @@ const Airtable = require("airtable");
 
 // Authenticate
 Airtable.configure({
-  apiKey: "keyMo9aus7MQMwY4g",
+  apiKey: process.env.NEXT_PUBLIC_AT_API_KEY
 });
 
+
 // Initialize a base
-const base = Airtable.base("appkSkJWLVJ3dGidy");
+const base = Airtable.base(process.env.NEXT_PUBLIC_AT_BASE_ID);
 
 // References to tables
 const words = base("Words");

@@ -2,7 +2,7 @@ import React from 'react'
 import Landing from '../components/Landing'
 import { words, articles, minifyRecords} from '../utils/airTable'
 
-export default function index({words, articles}) {
+export default function index({words, articles, error}) {
   
   return (  
     <div>
@@ -14,6 +14,7 @@ export default function index({words, articles}) {
  index
 
 export async function getServerSideProps(context) {
+  try{
   const allWords = await words.select({}).all();
   const allArticles = await articles.select({}).all()
   return {
@@ -21,5 +22,13 @@ export async function getServerSideProps(context) {
       words: minifyRecords(allWords),
       articles: minifyRecords(allArticles)
     }
+  }
+  }catch (error)
+  {
+      return {
+          props: {
+            error: "Error"
+          }
+      }
   }
 }
