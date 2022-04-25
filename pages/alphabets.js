@@ -19,17 +19,18 @@ export default function alphabets({alpha, error}) {
                 <thead className="border-2 text-center">
                     <tr>
                       
-                        <th className={cells}>باښ
-                            (ټکی | حرف)
+                        <th className={cells}>باښ<br />
+                            (ټکی ) <br />
+                             (حرف)
                         </th>
                         <th className={cells}> لاتین</th>
                         <th className={cells}>باښ به نام
-                            <br/>(د ټکی نوم )
+                            <br/>(د ټکی نوم ) <br />
                             (نام حرف )
                         </th>
                         <th className={lastCell}> بـــــــــاښ کــــــــــــه<br/>
-                            ( په کلمو کی | درکلمات )
-                            (د کلمې اول ،منـځ او اخــرکې )
+                            ( په کلمو کی ) (درکلمات )<br />
+                            (د کلمې اول ،منـځ او اخــرکې )<br />
                             (دراول، درمیـان وآخـرکلـمـه)
                         </th>
                     </tr>

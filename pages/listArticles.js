@@ -1,12 +1,13 @@
 import React from 'react'
 import {articles, minifyRecords} from '../utils/airTable'
 import { useRouter } from 'next/router'
+import SomethingWentWrong from '../components/SomethingWentWrong'
 
 function ListArticles({listOfArticles, error}) {
     const router = useRouter()
 
-    const cells = "border-2 border-[#000] text-right pr-2 hover:cursor-pointer" 
-    const cells2 = "border-2 border-[#000] text-center" 
+    const cells = " text-right pr-2 hover:cursor-pointer" 
+    const cells2 = " text-right" 
     const handleClick = (e, el) =>{
       e.preventDefault()
         router.push({
@@ -16,9 +17,10 @@ function ListArticles({listOfArticles, error}) {
     }
     
   return (
-    <div dir='rtl' className="container mt-10  flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl px-16 py-5 rounded-xl w-[900px] text-xl">
-         <table dir="rtl" className="border-2 text-xl">
-                <thead className="border-2 text-center">
+    <>  
+    {error? <SomethingWentWrong />:  <div dir='rtl' className="container mt-10  flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-16  rounded-xl w-[900px] text-xl">
+         <table dir="rtl" className=" text-xl">
+                <thead className=" text-center">
                     <tr>
                         <th className={`${cells} text-3xl`}> عنوان مقاله
                         </th>
@@ -37,7 +39,9 @@ function ListArticles({listOfArticles, error}) {
                     </tr>))}
                 </tbody>
         </table>
-    </div>
+    </div>}
+    </>
+
   )
 }
 

@@ -1,12 +1,14 @@
 import React from 'react'
 import Landing from '../components/Landing'
-import { words, articles, minifyRecords} from '../utils/airTable'
+import SomethingWentWrong from '../components/SomethingWentWrong'
+import { words, articles, minifyRecords, abbriviations} from '../utils/airTable'
 
-export default function index({words, articles, error}) {
+export default function index({words, articles,abbrs, error}) {
   
   return (  
     <div>
-      <Landing words={words} articles={articles} />
+      {error? <SomethingWentWrong />:
+      <Landing words={words} articles={articles} abbrs={abbrs} />}
       </div>
   )
 }
@@ -15,10 +17,12 @@ export default function index({words, articles, error}) {
 
 export async function getServerSideProps(context) {
   try{
+  const allAbbrs  = await abbriviations.select({}).all();
   const allWords = await words.select({}).all();
   const allArticles = await articles.select({}).all()
   return {
     props: {
+      abbrs: minifyRecords(allAbbrs),
       words: minifyRecords(allWords),
       articles: minifyRecords(allArticles)
     }
@@ -32,3 +36,5 @@ export async function getServerSideProps(context) {
       }
   }
 }
+
+

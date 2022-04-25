@@ -15,15 +15,15 @@ function LgHeader() {
         <div dir="rtl" className='text-xl flex flex-row justify-center '>
           <ul className='flex flex-row justify-center flex-wrap'>
             <li className={css}onClick={() => router.push({ pathname: '/' })} >
-              <span className="hover:bg-gray-500"><RiHome3Line className="ml-3" /></span> <p> صفحه نخست </p></li>
+              <span className="hover:bg-gray-500"><RiHome3Line className="ml-2" /></span> <p> صفحه نخست </p></li>
             <li className={css} onClick={() => router.push({ pathname: '/alphabets' })}>
-                <span><TiSortAlphabetically className="ml-3" /></span> <p>الفبای کلښه الا</p></li>
-            <li className={css} onClick={() => router.push({ pathname: '/about' })}><span><RiInformationLine className="ml-3" /></span> <p> معلومات </p></li>
-            <li className={css}><span><RiBook3Line className="ml-3" /></span> <p> قاموس </p></li>
-            <li className={css} onClick={() => router.push({ pathname: '/listArticles' })}><span><RiPenNibLine className="ml-3" /></span> <p> مقالات </p></li>
-            <li className={css}><span><RiBook3Line className="ml-3" /></span> <p> کتب </p></li>
+                <span><TiSortAlphabetically className="ml-2" /></span> <p>الفبای کلښه الا</p></li>
+            <li className={css} onClick={() => router.push({ pathname: '/about' })}><span><RiInformationLine className="ml-2" /></span> <p> معلومات </p></li>
+            <li className={css}><span><RiBook3Line className="ml-2" /></span> <p> قاموس </p></li>
+            <li className={css} onClick={() => router.push({ pathname: '/listArticles' })}><span><RiPenNibLine className="ml-2" /></span> <p> مقالات </p></li>
+            <li className={css}><span><RiBook3Line className="ml-2" /></span> <p> کتب </p></li>
             <li className={css} onClick={() => router.push({ pathname: '/contact' })}>
-              <span><RiChat3Line className="ml-3" /></span> <p> تماس </p></li>
+              <span><RiChat3Line className="ml-2" /></span> <p> تماس </p></li>
           </ul>
         </div>
       </div>

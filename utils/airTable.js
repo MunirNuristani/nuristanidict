@@ -14,6 +14,7 @@ const words = base("Words");
 const articles = base("Articles");
 const books = base("Books");
 const letters = base("Alphabet")
+const abbriviations = base('Abbr')
 
 //reduces the unnecessary data and fills empty fields
 const minifyRecords = records => {
@@ -27,4 +28,4 @@ const minifyRecords = records => {
   };
 
   //export all functions and references to tables. 
-export { words, articles, books, letters , minifyRecords };
+export { words, articles, books, letters, abbriviations , minifyRecords };
