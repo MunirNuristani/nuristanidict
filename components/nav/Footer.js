@@ -1,10 +1,13 @@
 import React from 'react'
 import { FiFacebook, FiInstagram, FiMail  } from "react-icons/fi"
+import {useAppContext} from '../../context/AppContext'
 
-function LgFooter() {
+function Footer() {
+  const{ state } =useAppContext()
+  const{mobileMenu} =state
   
   return (
-      <footer className=' absolute -bottom-20 flex flex-row justify-center  mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl p-2 absolute  w-full ' dir="rtl">
+      <footer className={` absolute -bottom-20 flex flex-row justify-center  mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl p-2 absolute  w-full ${mobileMenu&&"hidden"}`} dir="rtl">
           <div className="flex flex-row-reverse text-3xl ">
             <a href="https://www.facebook.com/MTGCF/" target="_blank" rel="noopener noreferrer" >
               <FiFacebook className='mx-4 hover:animate-[spin_linear_1s]' />
@@ -21,4 +24,4 @@ function LgFooter() {
 }
 
 
-export default LgFooter
+export default Footer

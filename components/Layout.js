@@ -1,16 +1,16 @@
 import React from 'react'
-import LgFooter from './nav/LgFooter'
-import LgHeader from './nav/LgHeader'
+import Footer from './nav/Footer'
+import Header from './nav/Header'
 import ScrollToTop from './nav/ScrollToTop'
 
 
 function Layout({children}) {
   return (
     <div>
-      <LgHeader />  
+      <Header /> 
         {children}
       <ScrollToTop />
-      <LgFooter />
+      <Footer />
     </div>
   )
 }

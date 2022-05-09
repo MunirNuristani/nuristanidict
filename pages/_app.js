@@ -1,10 +1,13 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
+import {ReducerWrapper} from '../context/AppContext'
 function MyApp({ Component, pageProps }) {
   return(
-    <Layout >
-      <Component {...pageProps} />
-    </Layout>
+    <ReducerWrapper >
+      <Layout >
+        <Component {...pageProps} />
+      </Layout>
+    </ReducerWrapper>
     ) 
 }
 

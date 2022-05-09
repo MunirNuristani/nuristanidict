@@ -1,19 +1,27 @@
-import React from 'react'
-import Landing from '../components/Landing'
+import React, { useEffect } from 'react'
+import LandingPage from '../components/Landing'
+import LoadingPage from '../components/LoadingPage'
 import SomethingWentWrong from '../components/SomethingWentWrong'
 import { words, articles, minifyRecords, abbriviations} from '../utils/airTable'
+import {useAppContext } from '../context/AppContext'
 
-export default function index({words, articles,abbrs, error}) {
-  
+export default function Index({words, articles,abbrs, error}) {
+const {state, dispatch} = useAppContext()  
+const{ loadingPage, mobileMenu } = state
+
+useEffect(()=>{
+  dispatch({type:"LOADINGPAGE", payload: false})
+},[words, articles, abbrs])
+
   return (  
-    <div>
-      {error? <SomethingWentWrong />:
-      <Landing words={words} articles={articles} abbrs={abbrs} />}
+    <div className={`md:mt-[120px]`}>
+      {error? <SomethingWentWrong />:(
+      loadingPage? <LoadingPage />:
+      <LandingPage words={words} articles={articles} abbrs={abbrs} />)}
       </div>
   )
 }
 
- index
 
 export async function getServerSideProps(context) {
   try{

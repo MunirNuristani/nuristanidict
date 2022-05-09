@@ -1,18 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Image from 'next/image'
 import Chart1 from '../public/chart_1.png'
 import Chart2 from '../public/chart_2.png'
 import Chart3 from '../public/chart_3.png'
 import Chart4 from '../public/chart_4.jpg'
+import LoadingPage from '../components/LoadingPage'
+import {useAppContext } from '../context/AppContext'
 
-function aboutDict() {
+function AboutDict() {
+    const {state, dispatch } = useAppContext()
+    const {loadingPage } = state
     const p = "text-justify text-lg mx-10"
     const img = "text-center mx-auto bg-white rounded-xl w-full"
     const h2 = "text-center m-auto text-2xl"
     const h3 = "text-justify mx-10 text-xl py-2"
+    useEffect(()=>{
+        dispatch({type:"LOADINGPAGE", payload:false})
+    },[Chart4])
     return (
         <>
-        <div dir='rtl' className="container  m-10 flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-5 rounded-xl w-[900px] py-20">
+        {loadingPage? <LoadingPage />:(
+            <div className=" flex flex-col mt-[100px]">
+        <div dir='rtl' className="container my-5 mx-auto flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] pt-20 pb-10">
             <h2 className={h2}>
                 قدمت وجایگاه تاریخی زبان نورستانی:
             </h2>
@@ -143,7 +152,7 @@ function aboutDict() {
             ۸- جدایی زبان های داردیک ونورستانی از نگاه ریشه و قدمت، که پنجاه سال قبل از سوی دانشمندان زبان شناسی تثبیت گردیده، دیگر قابل بحث نیست. اما در کشورما، برخی نویسنده گان هنوز هم زبان نورستانی را درشمار زبان های داردیک می نویسند، که اشتباه وخطای علمی ،محسوب می گردد.   <br />  
             </p>
         </div>
-        <div dir='rtl' className="container  m-10 flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-5 rounded-xl w-[900px] py-20">
+        <div dir='rtl' className="container my-5 mx-auto flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] pt-20 pb-10">
             <h2 className={h2}>
             بحث میتودیک:                               
             </h2>
@@ -275,8 +284,9 @@ function aboutDict() {
 
             </p>
         </div>
-        </>
+        </div>)}
+            </>
     )
 }
 
-export default aboutDict
+export default AboutDict
