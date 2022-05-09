@@ -26,9 +26,9 @@ function MenuItems() {
             <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/alphabets' })}>
                 <span><TiSortAlphabetically className="ml-2" /></span> <p>الفبای کلښه الا</p></li>
             <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/about' })}><span><RiInformationLine className="ml-2" /></span> <p> معلومات </p></li>
-            <li className={mobileMenu? mobileCSS: css}><span><RiBook3Line className="ml-2" /></span> <p> قاموس </p></li>
+            <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/underConstruction' })}><span><RiBook3Line className="ml-2" /></span> <p> قاموس </p></li>
             <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/listArticles' })}><span><RiPenNibLine className="ml-2" /></span> <p> مقالات </p></li>
-            <li className={mobileMenu? mobileCSS: css}><span><RiBook3Line className="ml-2" /></span> <p> کتب </p></li>
+            <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/underConstruction' })}><span><RiBook3Line className="ml-2" /></span> <p> کتب </p></li>
             <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/contact' })}>
               <span><RiChat3Line className="ml-2" /></span> <p> تماس </p></li>
           </ul>
