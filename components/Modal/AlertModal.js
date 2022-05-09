@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { useAppContext } from '../../context/AppContext'
-import {buttonCSS} from '../CSS/TailWindCSS'
+import {buttonCSS} from '../CSS/TailwindCSS'
 import {useRouter } from 'next/router'
 
 function AlertModal() {
