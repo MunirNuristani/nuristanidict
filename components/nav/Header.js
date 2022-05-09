@@ -13,8 +13,10 @@ function Header() {
         <div className="md:hidden">
         <LargeMenu />
         </div>
-        <div className="lg:hidden md:flex md:fixed md:top-0 md:right-0 md:w-full md:z-50">
+        <div className="lg:hidden xl:hidden md:block ">
+          <div className="md:flex md:fixed md:top-0 md:right-0 md:w-full md:z-50">
           <MobileMenu isOpen={isOpen} setOpen={setOpen} />
+          </div>
         </div>
     </>
 
