@@ -1,6 +1,7 @@
 export const initialState ={
     loadingPage: false,
     showMenu: false,
+    shrinkHeader:false,
     showAlertModal: false,
     alertModalMessage:""
 }
@@ -14,6 +15,18 @@ export const AppReducer = (state, action) => {
                 loadingPage: action.payload,
             };
         }
+        case "SHOWMENU": {  
+            return {
+                ...state,
+                showMenu: action.payload,
+            };
+        }
+        case "SHRINKHEADER": {  
+            return {
+                ...state,
+                shrinkHeader: action.payload,
+            };
+        }
         case "SHOWALERTMODAL": {  
             return {
                 ...state,
@@ -24,12 +37,6 @@ export const AppReducer = (state, action) => {
             return {
                 ...state,
                 alertModalMessage: action.payload,
-            };
-        }
-        case "SHOWMENU": {  
-            return {
-                ...state,
-                showMenu: action.payload,
             };
         }
         case "MULTIPLE_ASSIGNMENT": {

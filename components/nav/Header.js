@@ -11,35 +11,30 @@ import { useAppContext } from "../../context/AppContext";
 function Header() {
   const {state, dispatch} = useAppContext()
   const [ showSearchBar, setShowSearchBar ] = useState(false)
-  const [isShrunk, setShrunk] = useState(false);
-  const {showMenu} = state
+  const {showMenu, shrinkHeader} = state
 
   useEffect(() => {
     const onScroll = () => {
-      setShrunk(isShrunk => {
         if (
-          !isShrunk &&
+          !shrinkHeader &&
           (document.body.scrollTop > 20 ||
             document.documentElement.scrollTop > 20)
         ) {
-          return true;
+          dispatch({type:'SHRINKHEADER', payload: true});
         }
-
         if (
-          isShrunk &&
+          shrinkHeader &&
           document.body.scrollTop < 4 &&
           document.documentElement.scrollTop < 4
         ) {
-          return false;
+          dispatch({type:'SHRINKHEADER', payload: false});
         }
-
-        return isShrunk;
-      });
-    };
+  };
+    ;
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [shrinkHeader]);
 
   const toggleSearchBar =()=>{
     setShowSearchBar(prevState=>!prevState)
@@ -50,7 +45,7 @@ function Header() {
   return (
     <header className={`sticky top-0 z-10`}>
       <nav
-        className={`z-[99] flex w-full wrap h-[120px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000 ${isShrunk&&"h-[80px]"} bg-[#F2F2F2] p-2 relative justify-center items-center`}
+        className={`z-50 flex w-full wrap h-[120px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000 ${shrinkHeader &&"h-[80px]"} bg-[#F2F2F2] p-2 relative justify-center items-center`}
         dir="rtl"
       >
         <div className="flex flex-col justify-center items-center">
@@ -62,7 +57,7 @@ function Header() {
           <button className={`${buttonCSS} `} onClick={()=>toggleSearchBar()}>جستجو&nbsp; {showSearchBar?<HiX/>:<HiOutlineSearch />} </button>
         </div>
         <Link href={{ pathname: "/" }} passHref>
-          <div className={`flex absolute right-2 top-2 hover:cursor-pointer transition-all ease-in-out duration-1000 ${isShrunk&& 'hidden'}`}>
+          <div className={`flex absolute right-2 top-2 hover:cursor-pointer transition-all ease-in-out duration-1000 ${shrinkHeader && 'hidden'}`}>
             <Image
               src={logo}
               alt="logo"
@@ -72,12 +67,12 @@ function Header() {
             />
           </div>
         </Link>
-        <div className={`flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!isShrunk&& 'hidden'}`}>
+        <div className={`z-[99] flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!shrinkHeader&& 'top-24'}`}>
           <Hamburger toggled={showMenu} toggle={toggleMenu} direction="left" />
         </div>     
       </nav>
       <div className="w-full flex justify-center items-center">
-      <div className={`z-1 flex justify-center items-center h-full w-3/4 absolute  bottom-2 transition-all ease-in-out duration-1000 top-0 ${showSearchBar&&(isShrunk?'top-20':'top-24')} `}>
+      <div className={`z-1 flex justify-center items-center h-full w-3/4 absolute  bottom-2 transition-all ease-in-out duration-1000 top-0 ${showSearchBar&&(shrinkHeader?'top-20':'top-24')} `}>
           <SearchBar  />
         </div>
         </div>

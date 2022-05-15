@@ -27,7 +27,7 @@ function Footer() {
 
   return (
     <footer
-      className={`absolute z-50 -bottom-20 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 absolute text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
+      className={`absolute z-30 -bottom-20 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 absolute text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
       dir="rtl"
     >
      
