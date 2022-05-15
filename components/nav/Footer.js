@@ -23,15 +23,15 @@ function Footer() {
 
   const year = new Date().getFullYear() - 621;
   const CSS =
-    "hover:cursor-pointer relative text-center after:content-[''] after:absolute after:top-0 after:left-0 after:border-b-2 after:w-full after:h-full  flex shrink grow items-center  rounded-md after:hover:border-b-2 after:hover:border-[#121b33] after:duration-500 after:ease-in-out  after:hover:ease-in-out after:hover:duration-500 after:opacity-0 after:hover:opacity-100 after:active:border-b-4";
+    "hover:cursor-pointer relative text-center after:content-[''] after:absolute after:top-0 after:left-0 after:border-b-2 after:w-full after:h-full  flex shrink grow items-center  rounded-md after:hover:border-b-2 after:hover:border-[#121b33] after:duration-1000 after:ease-in-out  after:hover:ease-in-out after:hover:duration-500 after:opacity-0 after:hover:opacity-100 after:active:border-b-4";
 
   return (
     <footer
-      className={`absolute -bottom-20 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-2 absolute text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
+      className={`absolute z-50 -bottom-20 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 absolute text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
       dir="rtl"
     >
      
-      <div className="mx-12 flex flex-row justify-between text-lg">
+      <div className=" mx-12 flex flex-row justify-between text-lg">
       <div className='flex flex-row items-center'>
         <Link href={{ pathname: "/" }} passHref>
           <div className={`flex hover:cursor-pointer`}>

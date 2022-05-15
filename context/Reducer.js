@@ -1,6 +1,6 @@
 export const initialState ={
     loadingPage: false,
-    mobileMenu: false,
+    showMenu: false,
     showAlertModal: false,
     alertModalMessage:""
 }
@@ -26,10 +26,10 @@ export const AppReducer = (state, action) => {
                 alertModalMessage: action.payload,
             };
         }
-        case "MOBILEMENU": {  
+        case "SHOWMENU": {  
             return {
                 ...state,
-                mobileMenu: action.payload,
+                showMenu: action.payload,
             };
         }
         case "MULTIPLE_ASSIGNMENT": {

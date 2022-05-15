@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --main-bg-color: #394566;
+  --main-bg-color: #F2F2F2;
 }
 body *, body::after, body::before {
   box-sizing: border-box;
@@ -16,5 +16,5 @@ body {
   font-family: 'Lateef', cursive;
   position: relative;
   min-height: 100vh;
-  /* background-color:var(--main-bg-color); */
+  background-color:var(--main-bg-color);
 }
