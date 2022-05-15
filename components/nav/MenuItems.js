@@ -19,8 +19,7 @@ function MenuItems() {
   return (
     
     <div>
-
-         <ul className='flex flex-row justify-center flex-wrap md:flex-col md:w-full'>
+         <ul className='flex flex-row justify-center flex-wrap flex-col md:w-full'>
             <li className={mobileMenu? mobileCSS: css}onClick={() => handleRouting({ pathname: '/' })} >
               <span className="hover:bg-gray-500"><RiHome3Line className="ml-2" /></span> <p> صفحه نخست </p></li>
             <li className={mobileMenu? mobileCSS: css} onClick={() => handleRouting({ pathname: '/alphabets' })}>

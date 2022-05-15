@@ -28,6 +28,7 @@ function ListArticles({listOfArticles, error}) {
     <>  
     {error? <SomethingWentWrong />: 
     loadingPage? <LoadingPage />:( <div dir='rtl' className="container mt-10 md:mt-[120px]  flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-16  rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl ">
+      <div className=" text-xl sm:hidden flex justify-center" >
          <table dir="rtl" className=" text-xl sm:hidden">
                 <thead className=" text-center">
                     <tr>
@@ -38,6 +39,7 @@ function ListArticles({listOfArticles, error}) {
                         </th>
                     </tr>
                 </thead>
+                
                 <tbody>
                     {listOfArticles.map(el=>( 
                     <tr key={el.id}>
@@ -48,7 +50,10 @@ function ListArticles({listOfArticles, error}) {
                     </tr>))}
                 </tbody>
         </table>
-        <table dir="rtl" className=" text-xl sm:block">
+     
+        </div>
+        <div className=" text-xl md:hidden lg:hidden xl:hidden sm:block flex justify-center" >
+        <table dir="rtl" className=" text-xl  ">
                 <thead className=" text-center">
                     <tr>
                         <th className={`${cells} text-3xl border-gray-500`}> عناوین مقاله
@@ -65,6 +70,7 @@ function ListArticles({listOfArticles, error}) {
                     </tr>))}
                 </tbody>
         </table>
+        </div>
     </div>)}
     </>
 

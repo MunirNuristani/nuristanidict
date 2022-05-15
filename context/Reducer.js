@@ -1,5 +1,5 @@
 export const initialState ={
-    loadingPage: true,
+    loadingPage: false,
     mobileMenu: false,
     showAlertModal: false,
     alertModalMessage:""

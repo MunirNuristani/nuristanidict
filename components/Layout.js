@@ -1,15 +1,16 @@
 import React from 'react'
 import Footer from './nav/Footer'
 import Header from './nav/Header'
-import ScrollToTop from './nav/ScrollToTop'
+
 
 
 function Layout({children}) {
   return (
     <div>
       <Header /> 
+      <div className='pb-24'>
         {children}
-      <ScrollToTop />
+      </div>
       <Footer />
     </div>
   )

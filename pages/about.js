@@ -20,7 +20,7 @@ function AboutDict() {
     return (
         <>
         {loadingPage? <LoadingPage />:(
-            <div className=" flex flex-col mt-[100px]">
+            <div className="container mt-10 md:mt-[120px] flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
         <div dir='rtl' className="container my-5 mx-auto flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] pt-20 pb-10">
             <h2 className={h2}>
                 قدمت وجایگاه تاریخی زبان نورستانی:
