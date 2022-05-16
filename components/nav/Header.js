@@ -53,7 +53,7 @@ function Header() {
             نهاد فرهنگی میرزا تازه گل خان
           </p>
         </div>
-        <div className="flex justify-center items-center absolute left-2 top-2 h-full -mt-2">
+        <div className="flex justify-center items-center absolute left-2 top-2 h-full -mt-2 text-2xl">
           <button className={`${buttonCSS} `} onClick={()=>toggleSearchBar()}>جستجو&nbsp; {showSearchBar?<HiX/>:<HiOutlineSearch />} </button>
         </div>
         <Link href={{ pathname: "/" }} passHref>

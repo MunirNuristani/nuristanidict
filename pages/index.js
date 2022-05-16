@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import LandingPage from '../components/SearchBar'
 import LoadingPage from '../components/LoadingPage'
 import SomethingWentWrong from '../components/SomethingWentWrong'
-import { words, articles, minifyRecords, abbriviations} from '../utils/airTable'
+import MainLandingPage from '../components/mainPage/MainLandingPage'
 import {useAppContext } from '../context/AppContext'
 
 export default function Index({words, articles,abbrs, error}) {
@@ -12,10 +11,10 @@ const today= new Date().getDate
 console.log(today)
 
   return (  
-    <div className={`md:mt-[120px]`}>
+    <div>
       {error? <SomethingWentWrong />:(
       loadingPage? <LoadingPage />:
-      <div>Hi </div>)}
+      <MainLandingPage />)}
       </div>
   )
 }
