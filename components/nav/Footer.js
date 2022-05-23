@@ -27,7 +27,7 @@ function Footer() {
 
   return (
     <footer
-      className={`absolute z-30 -bottom-20 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 absolute text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
+      className={`z-30 -bottom-1 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
       dir="rtl"
     >
      
@@ -38,7 +38,7 @@ function Footer() {
             <Image
               src={logo}
               alt="logo"
-              width={100}
+              width={90}
               height={100}
               className="absolute right-2 top-2 "
             />
@@ -64,7 +64,7 @@ function Footer() {
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/underConstruction" })}
+            onClick={() => handleRouting({ pathname: "/dictionary/dictionary" })}
           >
             {" "}<p> قاموس </p>
           </li>
@@ -84,7 +84,7 @@ function Footer() {
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/contact" })}
+            onClick={() => handleRouting({ pathname: "/pictureGallery" })}
           >
             <p> گالری عکس ها </p>
           </li>

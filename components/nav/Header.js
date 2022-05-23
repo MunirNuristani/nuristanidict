@@ -61,7 +61,7 @@ function Header() {
             <Image
               src={logo}
               alt="logo"
-              width={100}
+              width={90}
               height={100}
               className="absolute right-2 top-2 "
             />

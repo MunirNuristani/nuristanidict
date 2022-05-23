@@ -9,7 +9,7 @@ function Layout({children}) {
   return (
     <div>
       <Header /> 
-      <div className='pb-24'>
+      <div className="min-h-[67vh]">
         {children}
       </div>
       <MenuItems />

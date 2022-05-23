@@ -31,12 +31,12 @@ export default function MainLandingPage({ listOfArticles }) {
     {
       item: Gallary,
       text: "گالری عکس ها زیبای نورستان",
-      route:'/UnderConstruction'  
+      route:'/pictureGallery'  
     },
     {
       item: Dictionary,
       text: "بیش از ۱۶۰۰۰ لغت دری و ترجمه ان به زبان کلښه الا",
-      route:'/UnderConstruction'  
+      route:'/dictionary/dictionary'  
     },
   ]
 
@@ -49,11 +49,17 @@ export default function MainLandingPage({ listOfArticles }) {
   }
   return (
     <>
-      <div dir='rtl' className="mt-10 mx-5 flex flex-col justify-center mx-auto backdrop-blur-sm drop-shadow-xl px-16 p-5 rounded-xl text-xl" >
-        <div className="w-full min-h-[calc(100vh-200px)] flex flex-col items-center justify-center z-50 bg-[#3772A6] text-[#F2F2F2]">
-          <h1 className=" text-5xl justify-center text-center w-1/3 ml-0 "> هدف ما زنده نگهداشتن زبان و فرهنگ ما است. </h1>
-          <p className="mt-10 text-2xl text-justify p-8">ویب سایت انترنیتی نهاد فرهنگی میرزا تازه گل خان یک وسیله سهل و آسان برای استفاده، دقیق و قابل اعتماد برای دوستداران زبان نورستانی کلښه الا است. در ایجا معلومات در مورد تاریخ، زبان و فرهنگ نورستان را نیز دیزاین گردیده است. در این سایت انترنیتی جهت معلومات خوانندگان محترم موضوعات متنوع راجع به زوایای مختلف حیات تاریخی، اجتماعی و اقتصادی مردم نورستان از گذشته تا حال ارایه گردیده است. بر علاوه این سایت انرنتی شامل کتب و مقالات مختلف مربوط زبان نورستانی کلښه الا میباشد.</p>
-          <div className='flex flex-row w-full justify-around h-[70px]'>
+      <div dir='rtl' className="mt-10 mx-5 flex flex-col justify-center items-center mx-auto backdrop-blur-sm drop-shadow-xl px-16 p-5 rounded-xl text-xl" >
+        <div className="w-full min-h-[calc(100vh-200px)] max-w-[1000px] flex flex-col items-center justify-center z-50 bg-[#3772A6] text-[#F2F2F2] rounded-xl">
+          <h1 className=" text-5xl justify-center text-center w-1/3 ml-0 "> هدف ما زنده نگهداشتن زبان و فرهنگ نورستان است. </h1>
+          <p className="w-full mt-10 text-2xl text-right pt-8 max-w-[900px]">هدف این سایت:</p>
+          <p className="text-2xl text-justify px-8 max-w-[900px]" >
+أرایه معلومات دقیق از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد. شما در این سایت معلوماتی علاوه بر معلومات در مورد زبان، ادبیات،تاریخ و رسوم وعنعنات نورستان سه دکشنری ؛یکی به نام فرهنګ زبان نورستانی (کلښه الا) ترجمه با زبان های پشتو و دری ،قاموس دری - نورستانی (کلښه الا) و فرهنگ نورستانی ( به زبان کته) را نیز در دسترس دارید.</p>
+<p className="mb-10 text-2xl text-justify px-8 max-w-[900px]" >
+در این سایت کوشش شده است تا کتب مختلفی که چه درافغانستان انتشار یافته است و نیز کتاب های مختلفی که در سایر کشور های جهان با زبان های مختلف انتشار یافته است، ګذاشته شود تا علاقمندان بتوانند معلومات مورد نیاز شان را در مورد نورستان از اینجا به دست آورند.
+همچنان آن عده مقالات را نیز در این سایت یافته می توانید که در مورد تاریخ و فرهنګ نورستان یا کافرستان قدیم از سوی دانشمندان آګاه با مسایل نورستان نګاشته شده است.
+سایت نهاد فرهنګی میرزا تازه ګل خان افتخار دارد که با دانشمندان مطرح که از زبان، تاریخ وفرهنګ نورستان آګاهی دارند؛ در ارتباط بوده واز نظریات نیک و علمی شان مستفید شده و می شود.</p>
+          <div className='flex flex-row w-full justify-around h-[70px] max-w-[900px]'>
           {icons.map( item =>{return(
           <div className={iconCSS} key={item.index} onClick={()=>handleRouting(item.route)}>
             <div onClick={()=>handleRouting()}><Image src={item.item} alt="dictionary-icon" /></div>
