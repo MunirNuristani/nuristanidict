@@ -20,7 +20,7 @@ function MenuItems() {
 
   return (
     
-    <div className={`z-40 h-[calc(100vh-80px)] fixed top-20 right-0 w-1/4 border-2 bg-[#F2F2F2] ease-in-out duration-500 ${!showMenu && "-right-[100%]"} ${!shrinkHeader && "top-44"} rounded-tl-lg`} dir='rtl'>
+    <div className={`z-40 h-[calc(100vh-80px)] fixed top-20 right-0 w-1/4 sm:w-full border-2 bg-[#F2F2F2] ease-in-out duration-500 ${!showMenu && "-right-[100%]"} ${!shrinkHeader && "top-44 sm:top-20"} rounded-tl-lg`} dir='rtl'>
          <ul className='flex flex-row justify-center flex-wrap flex-col pt-16 p-5 text-2xl'>
             <li className={CSS}onClick={() => handleRouting({ pathname: '/' })} >
               <span className="hover:bg-gray-500"><RiHome3Line className="ml-2" /></span> <p> صفحه نخست </p></li>

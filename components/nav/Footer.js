@@ -1,5 +1,6 @@
 import React from "react";
-import { FiFacebook, FiInstagram, FiMail } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiMail,FiHeart } from "react-icons/fi";
+import {MdOutlineBuildCircle} from 'react-icons/md'
 import { useAppContext } from "../../context/AppContext";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -27,11 +28,11 @@ function Footer() {
 
   return (
     <footer
-      className={`z-30 -bottom-1 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 text-[#1B57A6] w-full ${mobileMenu && "hidden"} border-t-2 border-[#1B57A6]`}
+      className={`z-30 -bottom-1 flex flex-col justify-around w  mx-auto backdrop-blur-sm bg-[#F2F2F2] drop-shadow-xl p-2 text-[#1B57A6] w-full  border-t-2 border-[#1B57A6]`}
       dir="rtl"
     >
      
-      <div className=" mx-12 flex flex-row justify-between text-lg">
+      <div className=" mx-12 flex flex-row justify-between text-lg sm:hidden">
       <div className='flex flex-row items-center'>
         <Link href={{ pathname: "/" }} passHref>
           <div className={`flex hover:cursor-pointer`}>
@@ -115,9 +116,12 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="text-center mx-auto text-sm  w-full mt-2">
+      <div className="flex flex-col items-center justify-centertext-sm  w-full mt-2">
         <p>
           {" "}حق تکثیر محفوظ است &copy; {year}{" "}
+        </p>
+        <p className="flex flex-row justify-center items-center" dir='ltr'>
+          { <MdOutlineBuildCircle /> }&nbsp;Munir Nuristani{" "}
         </p>
       </div>
     </footer>

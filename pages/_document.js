@@ -1,9 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document"
+import { Html, Head, Main, NextScript, } from "next/document"
 
 export default function MyDocument() {
   return (
-    <Html lang="Ar">
+    <Html lang="fa">
       <Head>
+        <title> نهاد فرهنگی میرزا تازه گل خان </title>
         <meta name="description" content="Nuristani.info"/>
         <meta name="keywords" content="نورستانی, کلشه الا, کلښه الا, افغانستان, نورستان" />
         <link rel="icon" href="/logo_favicon.png" />

@@ -20,8 +20,8 @@ function AboutDict() {
     return (
         <>
         {loadingPage? <LoadingPage />:(
-            <div className="container mt-10 md:mt-[120px] flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
-        <div dir='rtl' className="container my-5 mx-auto flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] pt-20 pb-10">
+            <div className="container mt-10 md:mt-[120px] sm:mt-[20px] flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 sm:p-2 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
+        <div dir='rtl' className="pb-10">
             <h2 className={h2}>
                 قدمت وجایگاه تاریخی زبان نورستانی:
             </h2>
@@ -152,7 +152,7 @@ function AboutDict() {
             ۸- جدایی زبان های داردیک ونورستانی از نگاه ریشه و قدمت، که پنجاه سال قبل از سوی دانشمندان زبان شناسی تثبیت گردیده، دیگر قابل بحث نیست. اما در کشورما، برخی نویسنده گان هنوز هم زبان نورستانی را درشمار زبان های داردیک می نویسند، که اشتباه وخطای علمی ،محسوب می گردد.   <br />  
             </p>
         </div>
-        <div dir='rtl' className="container my-5 mx-auto flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] pt-20 pb-10">
+        <div dir='rtl' className=" pb-10">
             <h2 className={h2}>
             بحث میتودیک:                               
             </h2>
@@ -283,6 +283,9 @@ function AboutDict() {
             در اینجا می خواهم حق وخاطره مادر عزیزم را با این یاد آوری گرامی داشته باشم؛ که در هنگام نوشتن بسیاری از لغت های کهن و اصیل زبان را که از او به خاطر دارم، توأم با لغت ها، چهره زیبایش بار بار در ذهن من نقش می بست. روح والدینم را خداوند شاد داشته باشد که هر دو برمن حق بزرگ پدری ومادری و استادي را دارند. <br />
 
             </p>
+        </div>
+        <div>
+            
         </div>
         </div>)}
             </>

@@ -36,14 +36,14 @@ function Dictionary() {
   // setDisplaySelectedWord({Word:"لغت مورد نظر شما در ارشیف ما موجود نیست. لطفاً از طریق صحفه تماس لغت مورد نظر تان را با ما در جریان بگذارید تا آنرا در ارشیف علاوه کنیم. تشکر از صبر شما. "})
 
   return (
-          <div className=" container  my-auto mt-10 mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl rounded-2xl py-10  text-4xl  flex flex-col justify-center w-[900px]"  dir="rtl" >
+          <div className=" container  my-auto mt-10 mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl rounded-2xl py-10  text-4xl  flex flex-col justify-center max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]"  dir="rtl" >
             <div dir="rtl" className="flex justify-center">
               <h2 className="p-auto">قاموس دری – نورستانی (کلښه الا)</h2>
             </div>
-            <form className="flex flex-row justify-between items-center w-full p-4" onSubmit={(e)=>handleSearch(e)}>
-              <label htmlFor="word" className="px-4 md:text-5xl "> لغت: </label>
-             <input className="w-full border-b-2 border-[#1B57A6] mx-3 px-2 text-right md:text-5xl" value={searchValue} placeholder="جستجو لغت جدید" onChange={(e)=>setSearchValue(e.target.value)}/>
-              <button type='submit' className={buttonCSS}
+            <form className="flex flex-row sm:flex-col justify-between items-center w-full p-4" onSubmit={(e)=>handleSearch(e)}>
+              <label htmlFor="word" className="px-4 md:text-5xl sm:text-2xl "> لغت: </label>
+             <input className="w-full border-b-2 border-[#1B57A6] mx-3 px-2 text-right md:text-5xl sm:text-2xl" value={searchValue} placeholder="جستجو لغت جدید" onChange={(e)=>setSearchValue(e.target.value)}/>
+              <button type='submit' className={`${buttonCSS} sm:text-2xl mt-4`}
               onClick={(e)=>handleSearch(e)}> جستجو</button>
             </form>  
             <div className='mx-10 my-5'>  

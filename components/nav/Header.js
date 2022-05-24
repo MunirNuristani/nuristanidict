@@ -54,10 +54,10 @@ function Header() {
           </p>
         </div>
         <div className="flex justify-center items-center absolute left-2 top-2 h-full -mt-2 text-2xl">
-          <button className={`${buttonCSS} `} onClick={()=>toggleSearchBar()}>جستجو&nbsp; {showSearchBar?<HiX/>:<HiOutlineSearch />} </button>
+          <button className={`${buttonCSS} sm:hidden`} onClick={()=>toggleSearchBar()}>جستجو&nbsp; {showSearchBar?<HiX/>:<HiOutlineSearch />} </button>
         </div>
         <Link href={{ pathname: "/" }} passHref>
-          <div className={`flex absolute right-2 top-2 hover:cursor-pointer transition-all ease-in-out duration-1000 ${shrinkHeader && 'hidden'}`}>
+          <div className={`flex absolute right-2 top-2 hover:cursor-pointer transition-all ease-in-out duration-1000 ${shrinkHeader && 'hidden'} sm:hidden`}>
             <Image
               src={logo}
               alt="logo"
@@ -67,12 +67,12 @@ function Header() {
             />
           </div>
         </Link>
-        <div className={`z-[99] flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!shrinkHeader&& 'top-24'}`}>
+        <div className={`z-[99] flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!shrinkHeader&& 'top-24'} sm:top-2`}>
           <Hamburger toggled={showMenu} toggle={toggleMenu} direction="left" />
         </div>     
       </nav>
       <div className="w-full flex justify-center items-center">
-      <div className={`z-1 flex justify-center items-center h-full w-3/4 absolute  bottom-2 transition-all ease-in-out duration-1000 top-0 ${showSearchBar&&(shrinkHeader?'top-20':'top-24')} `}>
+      <div className={`z-1 flex justify-center items-center h-full w-3/4 absolute  bottom-2 transition-all ease-in-out duration-1000 top-0 ${showSearchBar&&(shrinkHeader?'top-20':'top-24')} sm:hidden `}>
           <SearchBar  />
         </div>
         </div>
