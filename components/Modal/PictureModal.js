@@ -10,7 +10,7 @@ function PictureModal({showPictureModal, hidePictureModal, linkurl}) {
       <div className='relative w-[600px] h-[400px] md:w-[800px] md:h-[600px] lg:w-[1000px] lg:h-[600px] xl:w-[1200px] xl:h-[700px]  rounded bg-[white] shadow-lg'>
         <AiOutlineCloseCircle className=" z-[99] absolute right-5 text-6xl hover:text-[red] hover:cursor-pointer top-5" onClick={() => hidePictureModal()} />
         <div className={`aspect-w-5 aspect-h-3 relative flex justify-center items-center `}>
-          <Image src={linkurl} alt={linkurl} layout='fill' />
+          <Image src={linkurl} alt={linkurl} layout='fill' placeholder='blur' />
         </div>
       </div>
     </div>
