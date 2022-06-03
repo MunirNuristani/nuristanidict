@@ -1,41 +1,72 @@
 import React, { useState } from "react";
 import {buttonCSS} from '../../components/CSS/TailwindCSS'
 import data from '../../WordBank.json'
-
+import AlertModal  from "../../components/Modal/AlertModal";
+import { useAppContext } from '../../context/AppContext'
 function Dictionary() {
   const [ searchValue, setSearchValue ]  = useState('')
-  const [displayWords, setDisplayWords] = useState([])
-  const [displaySelectedWord, setDisplaySelectedWord] = useState([])
+  const [ displayWords, setDisplayWords] = useState([])
+  const [ displaySelectedWord, setDisplaySelectedWord] = useState([])
+  const { dispatch} = useAppContext();
 
   const handleSearch=(e, wd=searchValue)=>{
     e.preventDefault();
     setDisplayWords([])
     setDisplaySelectedWord('')
-    setSearchValue('')
-    const words = []
-    const displayWords=[]
-    for (let i = 0; i < data.length; i++){
-      if(data[i].Word.trim().includes(wd.trim())){
-        words.push(data[i].Word)
+    if(searchValue.length>0){
+      const words = []
+      const displayWords=[]
+      for (let i = 0; i < data.length; i++){
+        if(data[i].Word.trim().includes(wd.trim())){
+          words.push(data[i].Word)
+        }
+        if(data[i].Word.trim() == wd.trim()){
+          displayWords.push(data[i])
+        }   
       }
-      if(data[i].Word.trim() == wd.trim()){
-        displayWords.push(data[i])
+      if(words.length==0 ){ 
+          dispatch({type: "MULTIPLE_ASSIGNMENT", payload:{
+            alertButton: "تایید",
+            alertModalMessage: " لغت مورد نظر شما در ارشیف ما موجود نیست. لطفاً با ما تماس گرفته لغت مورد نظر تان را شریک سازید تا آنرا در ارشیف علاوه کنیم. تشکر از همکاری شما.",
+            showAlertModal: true
+          }})
       }
+      const newListOfWords= words.filter(word=> word.Word!==wd)
+      setDisplayWords(newListOfWords)
+      setDisplaySelectedWord(displayWords)
+      setSearchValue('')
+    }else{
+      dispatch({type: "MULTIPLE_ASSIGNMENT", payload:{
+        alertButton: "تایید",
+        alertModalMessage: "لطفاً لغت مورد نظر تان را در چوکات وارد کنید.",
+        showAlertModal: true
+      }})
     }
-    const newListOfWords= words.filter(word=> word.Word!==wd)
-    setDisplayWords(newListOfWords)
-    setDisplaySelectedWord(displayWords)
   }
   
   const setWord = (e, wd) =>{
     setSearchValue(wd)
-    handleSearch(e, wd)
+    const words = []
+      const displayWords=[]
+      for (let i = 0; i < data.length; i++){
+        if(data[i].Word.trim().includes(wd.trim())){
+          words.push(data[i].Word)
+        }
+        if(data[i].Word.trim() == wd.trim()){
+          displayWords.push(data[i])
+        }
+      }
+      const newListOfWords= words.filter(word=> word.Word!==wd)
+      setDisplayWords(newListOfWords)
+      setDisplaySelectedWord(displayWords)
+      setSearchValue('')
   }
   
 
-  // setDisplaySelectedWord({Word:"لغت مورد نظر شما در ارشیف ما موجود نیست. لطفاً از طریق صحفه تماس لغت مورد نظر تان را با ما در جریان بگذارید تا آنرا در ارشیف علاوه کنیم. تشکر از صبر شما. "})
+  // setDisplaySelectedWord({Word:" "})
 
   return (
+    <>
           <div className=" container  my-auto mt-10 mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl rounded-2xl py-10  text-4xl  flex flex-col justify-center max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]"  dir="rtl" >
             <div dir="rtl" className="flex justify-center">
               <h2 className="p-auto">قاموس دری – نورستانی (کلښه الا)</h2>
@@ -48,7 +79,7 @@ function Dictionary() {
             </form>  
             <div className='mx-10 my-5'>  
               <div dir='rtl' className={!displaySelectedWord && "hidden"}>
-                { displaySelectedWord.map(displayWord=>(
+                {displaySelectedWord && displaySelectedWord.map(displayWord=>(
                   <div key={displayWord.index}>
                 <span className='text-3xl'>{displayWord.Word}</span><span className={`${!displayWord.pronunciation && 'hidden'} text-2xl `}> {`[${displayWord.pronunciation?.trim()}]`}</span> <span className={!displayWord.Meaning && 'hidden'}>:</span>  <span className={`${!displayWord.ABBR && 'hidden'} text-2xl `}> ({displayWord.ABBR?.trim()}) </span> <span className="text-2xl"> { displayWord.Meaning}</span></div>))}
               </div>
@@ -59,7 +90,10 @@ function Dictionary() {
                   ))}
                 </div>
               </div>
+              
           </div>
+          <AlertModal />
+          </>
   )}
 
 export default Dictionary;

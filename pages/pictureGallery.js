@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import Images from '../components/ImageGallery/Images'
 import { storage } from '../utils/firebase-config'
 import { getDownloadURL, ref, listAll,  } from "firebase/storage";
 import { useAppContext } from '../context/AppContext'
 import PictureModal from '../components/Modal/PictureModal';
 import LoadingPage from '../components/LoadingPage';
 
-function PictureGallery() {
+function PictureGallery({imageUrl}) {
   const {state, dispatch} = useAppContext();
   const {loadingPage} =state
   const [ displayUrl, setDisplayUrl ] = useState([])
@@ -14,17 +14,17 @@ function PictureGallery() {
   const [modalUrl, setModalUrl] = useState('/logo_original.png')
   const hidePictureModal = ()=> setShowPictureModal(false)
 
+  
   useEffect(()=>{
-    const imageUrl= []
-    listAll(ref(storage, 'nuristanPics'))
-      .then((res) => {
-        res.items.map((itemRef) => {
-          getDownloadURL(ref(storage, itemRef._location.path)).then(
-          url => imageUrl.push( url))})})
-      .then(()=>setDisplayUrl(imageUrl))
-      .then(()=>dispatch({type:"LOADINGPAGE", payload:false}))
+    let displays =[]
+    imageUrl.forEach(image=>{
+    getDownloadURL(ref(storage, image))
+      .then((url)=>displays.push(url))
+      .then(()=> dispatch({type:"LOADINGPAGE", payload:false}))
       .catch((error) => console.log(error));
-    },[setShowPictureModal])
+    })
+    setDisplayUrl(displays) 
+  },[imageUrl, loadingPage])
     
 const showImageinModal= (link) =>{
   setShowPictureModal(true)
@@ -34,12 +34,17 @@ const showImageinModal= (link) =>{
   return (
     <>
     {loadingPage ? <LoadingPage />:
-    <div className="max-w-[1000px] mx-auto flex flex-wrap justify-center items-center">
-    {displayUrl.map((img)=>(
-      <div key={img.index} className="m-1 p-1 hover:cursor-pointer" >
-      <Image  src={img} alt={img} height={200} width={240} onClick={()=>showImageinModal(img)}/>
+    <div className="xl:max-w-[1000px] mx-auto py-16 px-4 sm:py-24 sm:px-6">
+      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 hover:cursor-pointer" >
+      {displayUrl.map((img)=>(
+        <div key={img.index} className="aspect-w-3 aspect-h-2" onClick={()=>showImageinModal(img)}>
+          <Images 
+            link={img}
+            alt="images"
+            placeholder='blur' />
+        </div>
+        ))}
       </div>
-    ))}
     </div>}
     <PictureModal showPictureModal={showPictureModal} hidePictureModal={hidePictureModal} linkurl={modalUrl} />
     </>
@@ -47,3 +52,17 @@ const showImageinModal= (link) =>{
 }
 
 export default PictureGallery
+
+export async function getServerSideProps(){
+  let imageUrl = []
+    await listAll(ref(storage, 'nuristanPics'))
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          imageUrl.push(JSON.parse(JSON.stringify(itemRef.fullPath)))
+        })
+        })
+      return{
+        props: {imageUrl}
+        
+  }
+}

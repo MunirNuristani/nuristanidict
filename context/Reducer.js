@@ -3,6 +3,7 @@ export const initialState ={
     showMenu: false,
     shrinkHeader:false,
     showAlertModal: false,
+    alertButton:'',
     alertModalMessage:""
 }
 
@@ -37,6 +38,12 @@ export const AppReducer = (state, action) => {
             return {
                 ...state,
                 alertModalMessage: action.payload,
+            };
+        }
+        case "ALERTBUTTON": {  
+            return {
+                ...state,
+                alertButton: action.payload,
             };
         }
         case "MULTIPLE_ASSIGNMENT": {

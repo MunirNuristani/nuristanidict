@@ -35,7 +35,7 @@ function Footer() {
       <div className=" mx-12 flex flex-row justify-between text-lg sm:hidden">
       <div className='flex flex-row items-center'>
         <Link href={{ pathname: "/" }} passHref>
-          <div className={`flex hover:cursor-pointer`}>
+          <div className={`flex hover:cursor-pointer md:hidden`}>
             <Image
               src={logo}
               alt="logo"
@@ -45,37 +45,37 @@ function Footer() {
             />
           </div>
           </Link>
-          <p dir="rtl" className="text-3xl mr-4">نهاد فرهنگی میرزا تازه گل خان  </p> 
+          <p dir="rtl" className="text-3xl lg:hidden mr-4">نهاد فرهنگی میرزا تازه گل خان  </p> 
       </div>
-        <ul className="flex flex-col justify-center flex-wrap md:flex-col md:w-full border-r-2 border-[#121b33] pr-12">
+        <ul className="flex flex-col justify-center flex-wrap md:flex-col md:w-full border-r-2 border-[#121b33] lg:pr-4 xl:pr-12">
           <li className={CSS} onClick={() => handleRouting({ pathname: "/" })}>
-            {" "}<p> صفحه نخست </p>
+            <p> صفحه نخست </p>
           </li>
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/alphabets" })}
           >
-            {" "}<p>الفبای کلښه الا</p>
+            <p>الفبای کلښه الا</p>
           </li>
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/about" })}
           >
-            {" "}<p> معلومات </p>
+            <p> معلومات </p>
           </li>
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/dictionary/dictionary" })}
           >
-            {" "}<p> قاموس </p>
+            <p> قاموس </p>
           </li>
         </ul>
-        <ul className="flex flex-col justify-center flex-wrap md:flex-col pr-12 md:w-full border-r-2 border-[#121b33]">
+        <ul className="flex flex-col justify-center flex-wrap  md:flex-col  lg:pr-4 xl:pr-12 md:w-full border-r-2 border-[#121b33]">
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/listArticles" })}
           >
-            {" "}<p> مقالات </p>
+            <p> مقالات </p>
           </li>
           <li
             className={CSS}
