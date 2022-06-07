@@ -40,8 +40,7 @@ const showImageinModal= (link) =>{
         <div key={img.index} className="aspect-w-3 aspect-h-2" onClick={()=>showImageinModal(img)}>
           <Images 
             link={img}
-            alt="images"
-            placeholder='blur' />
+            alt="images"/>
         </div>
         ))}
       </div>
