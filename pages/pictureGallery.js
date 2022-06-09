@@ -39,7 +39,7 @@ const showImageinModal= (link) =>{
       {displayUrl.map((img)=>(
         <div key={img.index} className="aspect-w-3 aspect-h-2" onClick={()=>showImageinModal(img)}>
           <Images 
-            link={img}
+            src={img}
             alt="images"/>
         </div>
         ))}
