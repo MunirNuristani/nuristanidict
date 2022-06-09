@@ -19,11 +19,12 @@ function PictureGallery({imageUrl}) {
     let displays =[]
     imageUrl.forEach(image=>{
     getDownloadURL(ref(storage, image))
-      .then((url)=>displays.push(url))
+      .then((url)=>displays.push(url))  
       .then(()=> dispatch({type:"LOADINGPAGE", payload:false}))
       .catch((error) => console.log(error));
     })
-    setDisplayUrl(displays) 
+    setDisplayUrl(displays)
+    console.log("displayURL: ", displays)
   },[imageUrl, loadingPage])
     
 const showImageinModal= (link) =>{
