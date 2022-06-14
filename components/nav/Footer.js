@@ -61,7 +61,7 @@ function Footer() {
             className={CSS}
             onClick={() => handleRouting({ pathname: "/about" })}
           >
-            <p> معلومات </p>
+            <p> گرامر زبان نورستانی </p>
           </li>
           <li
             className={CSS}

@@ -26,7 +26,7 @@ function MenuItems() {
               <span className="hover:bg-gray-500"><RiHome3Line className="ml-2" /></span> <p> صفحه نخست </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/alphabets' })}>
                 <span><TiSortAlphabetically className="ml-2" /></span> <p>الفبای کلښه الا</p></li>
-            <li className={CSS} onClick={() => handleRouting({ pathname: '/about' })}><span><RiInformationLine className="ml-2" /></span> <p> معلومات </p></li>
+            <li className={CSS} onClick={() => handleRouting({ pathname: '/about' })}><span><RiInformationLine className="ml-2" /></span> <p> گرامر زبان نورستانی کلښه الا </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/dictionary/dictionary' })}><span><RiBook3Line className="ml-2" /></span> <p> قاموس </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/listArticles' })}><span><RiPenNibLine className="ml-2" /></span> <p> مقالات </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/underConstruction' })}><span><RiBook3Line className="ml-2" /></span> <p> کتب </p></li>

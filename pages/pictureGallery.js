@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import Images from '../components/ImageGallery/Images'
+import Image from 'next/image'
 import { storage } from '../utils/firebase-config'
 import { getDownloadURL, ref, listAll,  } from "firebase/storage";
 import { useAppContext } from '../context/AppContext'
 import PictureModal from '../components/Modal/PictureModal';
 import LoadingPage from '../components/LoadingPage';
+import GridGallery from '../components/gallary/GridGallary';
 
 function PictureGallery({imageUrl}) {
   const {state, dispatch} = useAppContext();
   const {loadingPage} =state
   const [ displayUrl, setDisplayUrl ] = useState([])
-  const [ showPictureModal, setShowPictureModal ] = useState(false)
-  const [modalUrl, setModalUrl] = useState('/logo_original.png')
-  const hidePictureModal = ()=> setShowPictureModal(false)
+  
 
   
   useEffect(()=>{
@@ -27,26 +26,15 @@ function PictureGallery({imageUrl}) {
     console.log("displayURL: ", displays)
   },[imageUrl, loadingPage])
     
-const showImageinModal= (link) =>{
-  setShowPictureModal(true)
-  setModalUrl(link)
-}
+
 
   return (
     <>
     {loadingPage ? <LoadingPage />:
-    <div className="xl:max-w-[1000px] mx-auto py-16 px-4 sm:py-24 sm:px-6">
-      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 hover:cursor-pointer" >
-      {displayUrl.map((img)=>(
-        <div key={img.index} className="aspect-w-3 aspect-h-2" onClick={()=>showImageinModal(img)}>
-          <Images 
-            src={img}
-            alt="images"/>
-        </div>
-        ))}
-      </div>
+    <div className="xl:max-w-[1000px] mx-auto py-16 px-4 sm:py-24 sm:px-6 bg-gray-200 my-10 rounded-lg ">
+      <GridGallery images={displayUrl} />
     </div>}
-    <PictureModal showPictureModal={showPictureModal} hidePictureModal={hidePictureModal} linkurl={modalUrl} />
+    
     </>
   )
 }
