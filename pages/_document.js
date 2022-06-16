@@ -5,7 +5,7 @@ export default function MyDocument() {
     <Html lang="fa">
       <Head>
         <meta name="description" content="Nuristani.info"/>
-        <meta name="keywords" content="نورستانی, کلشه الا, کلښه الا, افغانستان, نورستان" />
+        <meta name="keywords" content="نورستانی, کلشه الا, کلښه الا, افغانستان, نورستان, nuristan, nuristani, dictionary, translation, translate" />
         <link rel="icon" href="/logo_favicon.png" />
         <link rel="apple-touch-icon" href="/logo-favicon.png"></link>
         <link rel="manifest" href="/manifest.json" />
