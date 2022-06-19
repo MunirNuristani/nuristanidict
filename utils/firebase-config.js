@@ -16,4 +16,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
-export { db, storage };
+const coverStorage  = getStorage(app, "nuristanidict.appspot.com/bookcovers")
+export { db, storage,coverStorage };

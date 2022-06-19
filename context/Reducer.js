@@ -5,6 +5,7 @@ export const initialState ={
     showAlertModal: false,
     alertButton:'',
     alertModalMessage:""
+    
 }
 
 

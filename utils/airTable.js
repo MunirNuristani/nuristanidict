@@ -27,5 +27,18 @@ const minifyRecords = records => {
     };
   };
 
+const minifyDocs = docs=>{
+  return docs.map(doc=>minifydoc(doc))
+}
+
+const minifydoc=doc=>{
+  return{
+    id: doc.id,
+    title:doc.fields.title,
+    author:doc.fields.author,
+    cover:doc.fields.Book_Picture[0].thumbnails.large.url,
+    content:doc.fields.Book_Links[0].url
+  }
+}
   //export all functions and references to tables. 
-export { words, articles, books, letters, abbriviations, messages, minifyRecords };
+export { words, articles, books, letters, abbriviations, messages, minifyRecords, minifyDocs };

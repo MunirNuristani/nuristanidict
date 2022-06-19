@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 import {ReducerWrapper} from '../context/AppContext'
+
+
 function MyApp({ Component, pageProps }) {
   return(
     <ReducerWrapper >

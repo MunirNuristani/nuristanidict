@@ -24,7 +24,7 @@ function AboutDict() {
                 <div className="container mt-10 md:mt-[120px] sm:mt-[20px] flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 sm:p-2 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
                     <div dir='rtl' className="pb-10">
                         <h1 className={h1}>
-                            گرامر (دستور زبان) نورستانی کلښه الا
+                            گرامر (دستور زبان)  کلښه الا
                         </h1>
                         <h2 className={`${h2} pb-6`}>
                             سمیع الله تازه

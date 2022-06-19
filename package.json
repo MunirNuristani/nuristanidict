@@ -9,18 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.4.0",
+    "@react-pdf-viewer/default-layout": "^3.5.0",
     "airtable": "^0.11.3",
     "better-react-spinkit": "^2.0.4",
     "firebase": "^9.8.1",
     "hamburger-react": "^2.5.0",
     "next": "12.1.5",
+    "next-pwa": "^5.5.4",
+    "pdfjs-dist": "^2.14.305",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
     "react-loader-spinner": "^6.0.0-0",
     "react-visibility-sensor": "^5.1.1",
     "tailwind": "^2.2.0",
-    "utf8": "^3.0.0"
+    "utf8": "^3.0.0",
+    "webpack": "^5.73.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",

@@ -79,7 +79,7 @@ function Footer() {
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/underConstruction" })}
+            onClick={() => handleRouting({ pathname: "/bookList" })}
           >
             <p> کتب </p>
           </li>

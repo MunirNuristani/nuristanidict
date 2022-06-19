@@ -6,8 +6,14 @@ const nextConfig = {
 module.exports = nextConfig,
 module.exports = {
   images: {
-    domains: ['dl.airtable.com'],
-    domains: ["firebasestorage.googleapis.com"],
+    domains: ['dl.airtable.com', "firebasestorage.googleapis.com"],
     formats: ['image/avif', 'image/webp'],
   },
 }
+const withPWA = require('next-pwa')
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public'
+  }
+})
