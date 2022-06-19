@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import Chart1 from '../public/chart_1.png'
-import Chart2 from '../public/chart_2.png'
-import Chart3 from '../public/chart_3.png'
-import Chart4 from '../public/chart_4.jpg'
+
 import LoadingPage from '../components/LoadingPage'
 import { useAppContext } from '../context/AppContext'
 
@@ -17,7 +14,7 @@ function AboutDict() {
     const h3 = "text-justify mx-10 text-xl py-2"
     useEffect(() => {
         dispatch({ type: "LOADINGPAGE", payload: false })
-    }, [Chart4])
+    }, [])
     return (
         <>
             {loadingPage ? <LoadingPage /> : (
