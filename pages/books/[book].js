@@ -46,7 +46,7 @@ const Books = () => {
 
 const link = getFromStorage("url")
   return (
-    <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.js">
+    
       <div className="max-w-[900px] h-[750px] mx-auto mb-28 mt-10 ">
         <button className="absolute top-50 left-5 bg-[#357edd] text-[#fff] cursor-pointer py-2 px-4 rounded-lg" onClick={() => {
           router.push({
@@ -188,8 +188,6 @@ const link = getFromStorage("url")
           theme={{ direction: TextDirection.RightToLeft, }}
         />
       </div>
-
-    </Worker >
   );
 };
 
