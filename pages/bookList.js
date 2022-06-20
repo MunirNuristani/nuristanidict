@@ -6,6 +6,7 @@ import { books, minifyDocs } from "../utils/airTable";
 export default function Index({allBooks}) {
   const router = useRouter();
   const newBooks = minifyDocs(allBooks)
+
   const openBook =(id)=>{
     router.push({
       pathname: '/books/[book]',
