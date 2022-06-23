@@ -41,7 +41,7 @@ const Books = () => {
     if (err) { console.error(err); return; }
     setToStorage("url", record.fields.Book_Links[0].url )
 })
-},[])
+},[id])
 
 
 const link = getFromStorage("url")
