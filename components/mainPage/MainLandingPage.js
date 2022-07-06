@@ -21,7 +21,7 @@ export default function MainLandingPage({ listOfArticles }) {
     {
       item: Books,
       text: "کتاب های مختطف در مورد نورستان",
-      route:'/UnderConstruction'  
+      route:'/bookList'  
     },
     {
       item: Articles,
@@ -63,7 +63,7 @@ export default function MainLandingPage({ listOfArticles }) {
           {icons.map( item =>{return(
           <div className={iconCSS} key={item.index} onClick={()=>handleRouting(item.route)}>
             <div onClick={()=>handleRouting()}><Image src={item.item} alt="dictionary-icon" la /></div>
-            <div className="absolute hidden items-center justify-center text-center  top-16 w-[200px] h-[100px] sm:hidden p-2 rounded bg-[#F2F2F2] text-[black] z-[99]  duration-500 ease-in-out group-hover:flex"> <p>{item.text}</p></div>
+            <div className="absolute hidden items-center justify-center text-center  top-16 w-[200px] h-[100px] sm:hidden p-2 rounded bg-[#F2F2F2] text-[black] z-[99]  transition duration-500 ease-in group-hover:flex"> <p className="text-center">{item.text}</p></div>
           </div>)})}
   
         </div>

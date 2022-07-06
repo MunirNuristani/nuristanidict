@@ -57,12 +57,12 @@ function Footer() {
           >
             <p>الفبای کلښه الا</p>
           </li>
-          <li
+          {/* <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/about" })}
           >
             <p> گرامر زبان نورستانی </p>
-          </li>
+          </li> */}
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/dictionary/dictionary" })}
