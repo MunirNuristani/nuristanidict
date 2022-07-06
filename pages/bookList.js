@@ -20,10 +20,10 @@ export default function Index({allBooks}) {
       <div dir="rtl" className="w-full flex flex-row flex-wrap flex-grow">
       {newBooks.map(book=>(
         <div key={book.index}
-          className="w-[200px] h-[300px] rounded-xl border-1 border-gray-300 shadow-xl flex flex-col justify-center items-center bg-gray-100 hover:shadow-2xl cursor-pointer m-3"
+          className="w-[200px] h-[300px] rounded-xl border-1 border-gray-200 shadow-xl flex flex-col justify-center items-center bg-gray-300 hover:shadow-2xl cursor-pointer m-3"
           onClick={()=>openBook(book.id)}
         >
-          <Image src={book.cover} alt="bookCover" height={150} width={100} />
+          <Image src={book.cover} alt="bookCover" height={200} width={150} />
           <h2 className="text-center mx-auto text-lg">
             {book.title}
           </h2>
