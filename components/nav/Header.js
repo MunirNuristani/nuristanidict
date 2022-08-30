@@ -45,12 +45,16 @@ function Header() {
   return (
     <header className={`sticky top-0 z-10`}>
       <nav
-        className={`z-50 flex w-full wrap h-[120px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000 ${shrinkHeader &&"h-[80px]"} bg-[#F2F2F2] p-2 relative justify-center items-center`}
+        className={`z-50 flex w-full wrap h-[120px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000 ${shrinkHeader &&"h-[90px]"} bg-[#F2F2F2] p-2 relative justify-center items-center`}
         dir="rtl"
       >
         <div className="flex flex-col justify-center items-center">
           <p dir="rtl" className="text-5xl md:text-3xl">
             نهاد فرهنگی میرزا تازه گل خان
+          </p>
+          <p dir="ltr" className="text-3xl md:text-2xl" style={{fontFamily:'Poppins'}}>
+            Mirza Taza Gul Khan Cultural Foundation
+          
           </p>
         </div>
         <div className="flex justify-center items-center absolute left-2 top-2 h-full -mt-2 text-2xl">
