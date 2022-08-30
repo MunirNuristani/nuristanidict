@@ -4,19 +4,22 @@ import BookRecommendation from './BookRecommendation'
 import Image from 'next/image'
 import firstImage from '../../public/nuristani0101.JPG'
 import secondImage from '../../public/25984266-dc95-4dd7-af08-f16824bed092.JPG'
-import Dictionary from '../../public/big-dictionary.png'
-import Gallary from '../../public/gallery.png'
-import Articles from '../../public/copywriting.png'
+import Dictionary from '../../public/pageIcons/big-dictionary.png'
+import Gallary from '../../public/pageIcons/gallery.png'
+import Articles from '../../public/pageIcons/copywriting.png'
 import { useRouter } from 'next/router'
-import Books from '../../public/open-book.png'
+import Books from '../../public/pageIcons/open-book.png'
 import { useAppContext } from '../../context/AppContext'
-import { articles } from '../../utils/airTable'
+import { storage } from '../../utils/firebase-config'
+import { listAll, ref } from "firebase/storage"
 
-export default function MainLandingPage({ listOfArticles }) {
+
+export default function MainLandingPage({imageUrl}) {
   const {dispatch} = useAppContext();
   const router = useRouter()
   const iconCSS = "group relative min-w-[100px] w-[50px] h-[50px] flex justify-center sm:w-[25px] sm:h-[25px] after:content-[''] after:absolute after:top-0 after:left-0 after:border-2 after:border-blue-400 after:w-full after:h-full items-center px-4 after:duration-500 after:ease-in-out after:hover:ease-in-out after:hover:duration-500 hover:h-[60px] sm:hover:h-[40px] sm:hover:w-[40px] hover:w-[60px] after:opacity-0 after:hover:w-60px hover:cursor-pointer sm:mb-12"
-  console.log("listof articles from static props: ", listOfArticles)
+  
+  console.log("image",imageUrl)
   const icons = [
     {
       item: Books,
@@ -85,22 +88,18 @@ export default function MainLandingPage({ listOfArticles }) {
 
   )
 }
-export async function getServerSideProps(context) {
-  
-  try{
-      const allArticles = await articles.select({
-        filterByFormula: fIND(10, No),
-         }).all();
-      return {
-        props: {
-          listOfArticles: minifyRecords(allArticles)
-        }
-      }
-      }catch (error){
-          return {
-              props: {
-                error: "Error"
-              }
-          }
-      }
+
+export async function getServerSideProps(){
+  let imageUrl = []
+    await listAll(ref(storage, 'nuristanPics'))
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          imageUrl.push(JSON.parse(JSON.stringify(itemRef.fullPath)))
+        })
+        })
+      return{
+        props: {imageUrl}
+        
   }
+}
+

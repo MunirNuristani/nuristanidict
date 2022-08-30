@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +18,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color:var(--main-bg-color);
+  
 }
 p{
   text-align: justify;

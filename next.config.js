@@ -1,19 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+
 }
-const withPWA = require('next-pwa')
+const withPWA = require('next-pwa')({
+  dest: 'public'
+})
 
 module.exports = nextConfig,
 
 module.exports = withPWA({
   pwa: {
     dest: 'public'
-  }
-})
-module.exports = {
+  },
+  reactStrictMode: true,
+
   images: {
     domains: ['dl.airtable.com', "firebasestorage.googleapis.com"],
     formats: ['image/avif', 'image/webp'],
   },
-}
+})
