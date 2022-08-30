@@ -18,6 +18,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color:var(--main-bg-color);
+  
 }
 p{
   text-align: justify;

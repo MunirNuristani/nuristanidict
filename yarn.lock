@@ -870,7 +870,7 @@
     "@babel/types" "^7.4.4"
     "esutils" "^2.0.2"
 
-"@babel/runtime-corejs3@^7.10.2":
+"@babel/runtime-corejs3@^7.10.2", "@babel/runtime-corejs3@^7.16.5":
   "integrity" "sha512-WxYHHUWF2uZ7Hp1K+D1xQgbgkGUfA+5UPOegEXGt2Y5SMog/rYCVaifLZDbw8UkNXozEqqrZTy6bglL7xTaCOw=="
   "resolved" "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.17.9.tgz"
   "version" "7.17.9"
@@ -9051,6 +9051,13 @@
   "version" "6.1.0"
   dependencies:
     "async-limiter" "~1.0.0"
+
+"xregexp@^5.1.1":
+  "integrity" "sha512-fKXeVorD+CzWvFs7VBuKTYIW63YD1e1osxwQ8caZ6o1jg6pDAbABDG54LCIq0j5cy7PjRvGIq6sef9DYPXpncg=="
+  "resolved" "https://registry.npmjs.org/xregexp/-/xregexp-5.1.1.tgz"
+  "version" "5.1.1"
+  dependencies:
+    "@babel/runtime-corejs3" "^7.16.5"
 
 "xtend@^4.0.0", "xtend@^4.0.2", "xtend@~4.0.1":
   "integrity" "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
