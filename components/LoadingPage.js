@@ -3,7 +3,7 @@ import { Watch } from 'react-loader-spinner'
 
 function LoadingPage() {
   return (
-    <div className='flex justify-center items-center m-auto h-[calc(100vh-316px)] bg-white opacity-75'>
+    <div className='flex justify-center items-center m-auto md:h-[calc(100vh-205px)] h-[calc(100vh-316px)] bg-white opacity-75'>
       <Watch
         height="120"
         width="120"
