@@ -15,7 +15,7 @@ function AricleDetail({ listOfArticles, error }) {
   const [sortedImages, setSortedImages] = useState([])
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false })
-    setSortedImages(articleToDisplay[0]?.fields.Pictures.sort((a,b)=> a.filename>b.filename?1:(a.filename<b.filename?-1:0)))
+    setSortedImages(articleToDisplay[0]?.fields.Pictures?.sort((a,b)=> a.filename>b.filename?1:(a.filename<b.filename?-1:0)))
   }, [listOfArticles])
   console.log(sortedImages)
   return (
@@ -38,7 +38,7 @@ function AricleDetail({ listOfArticles, error }) {
               dangerouslySetInnerHTML={{ __html: articleToDisplay[0]?.fields.Article_body }}
             />
             <>
-              {articleToDisplay[0]?.fields.Pictures.slice(1, articleToDisplay[0]?.fields.Pictures.length).map((img, idx) => (
+              {articleToDisplay[0]?.fields.Pictures?.slice(1, articleToDisplay[0]?.fields.Pictures.length).map((img, idx) => (
                 
                 <div key={idx} className="flex flex-column justify-center m-2" style={{ width: "100%", height: '50vh', position: 'relative' }}>
                   <Image src={img.url} l alt='article-image' width={100} height={100} layout="fill" objectFit="contain" />
