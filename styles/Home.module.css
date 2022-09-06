@@ -23,3 +23,7 @@
     height: unset !important;
   }
 } */
+.mainContainer{
+  min-height: calc(100vh - 316px)
+  
+}

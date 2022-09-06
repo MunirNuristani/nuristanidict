@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import SomethingWentWrong from '../components/SomethingWentWrong'
 import { useAppContext } from '../context/AppContext'
 import LoadingPage from '../components/LoadingPage'
-import XRegExp from 'xregexp'
+
 
 function ListArticles({ listOfArticles, error }) {
   const { state, dispatch } = useAppContext()
@@ -13,7 +13,6 @@ function ListArticles({ listOfArticles, error }) {
   const cells = " text-right pr-2 hover:cursor-pointer border-b border-gray-300"
   const cells2 = " text-right border-b border-gray-300"
   const [sortedArticles, setSortedArticles] = useState([])
-  const rexArabic = XRegExp("^\\p{Arabic}+$")
   const handleClick = (e, el) => {
     e.preventDefault()
     dispatch({ type: "LOADINGPAGE", payload: true })
@@ -96,7 +95,7 @@ export default ListArticles
 
 export async function getServerSideProps(context) {
   try {
-    const allArticles = await articles.select({ sort: [{ field: "No", direction: "asc" }] }).all();
+    const allArticles = await articles.select().all();
     return {
       props: {
         listOfArticles: minifyRecords(allArticles)

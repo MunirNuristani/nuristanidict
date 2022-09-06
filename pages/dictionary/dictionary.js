@@ -67,7 +67,7 @@ function Dictionary() {
 
   return (
     <>
-          <div className=" container  my-auto mt-10 mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl rounded-2xl py-10  text-4xl  flex flex-col justify-center max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]"  dir="rtl" >
+          <div className=" my-auto mt-10 mx-auto backdrop-blur-sm bg-white/60 drop-shadow-xl rounded-2xl py-10  text-4xl  flex flex-col justify-center max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]"  dir="rtl" >
             <div dir="rtl" className="flex justify-center">
               <h2 className="p-auto">قاموس دری – نورستانی (کلښه الا)</h2>
             </div>
