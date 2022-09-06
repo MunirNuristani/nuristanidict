@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import SomethingWentWrong from '../components/SomethingWentWrong'
 import { useAppContext } from '../context/AppContext'
 import LoadingPage from '../components/LoadingPage'
-import XRegExp from 'xregexp'
+
 
 function ListArticles({ listOfArticles, error }) {
   const { state, dispatch } = useAppContext()
@@ -95,7 +95,7 @@ export default ListArticles
 
 export async function getServerSideProps(context) {
   try {
-    const allArticles = await articles.select({ sort: [{ field: "No", direction: "asc" }] }).all();
+    const allArticles = await articles.select().all();
     return {
       props: {
         listOfArticles: minifyRecords(allArticles)

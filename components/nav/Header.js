@@ -45,7 +45,7 @@ function Header() {
   return (
     <header className={`sticky top-0 z-10`}>
       <nav
-        className={`z-50 flex w-full wrap h-[130px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000 ${shrinkHeader &&"h-[100px]"} bg-[#F2F2F2] p-2 relative justify-center items-center`}
+        className={`z-50 flex w-full wrap h-[130px] transition-all border-b-2 border-[#1B57A6] ease-in-out duration-1000  bg-[#F2F2F2] p-2 relative justify-center items-center`}
         dir="rtl"
       >
         <div className="flex flex-col justify-center items-center">

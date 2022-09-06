@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiBook3Line, RiChat3Line, RiHome3Line, RiInformationLine, RiPenNibLine } from "react-icons/ri"
+import { RiBook3Line, RiChat3Line, RiHome3Line, RiPenNibLine } from "react-icons/ri"
 import { TiSortAlphabetically } from "react-icons/ti"
 import { AiOutlinePicture } from "react-icons/ai"
 import { useRouter } from 'next/router'
@@ -20,7 +20,7 @@ function MenuItems() {
 
   return (
     
-    <div className={`z-40 h-[calc(100vh-80px)] fixed top-20 right-0 w-1/4 sm:w-full border-2 bg-[#F2F2F2] ease-in-out duration-500 ${!showMenu && "-right-[100%]"} ${!shrinkHeader && "top-44 sm:top-20"} rounded-tl-lg`} dir='rtl'>
+    <div className={`z-40 h-[calc(100vh-130px)] fixed top-20 right-0 w-1/4 sm:w-full border-2 bg-[#F2F2F2] ease-in-out duration-500 ${!showMenu && "-right-[100%]"} ${!shrinkHeader && "top-44 sm:top-20"} rounded-tl-lg`} dir='rtl'>
          <ul className='flex flex-row justify-center flex-wrap flex-col pt-16 p-5 text-2xl'>
             <li className={CSS}onClick={() => handleRouting({ pathname: '/' })} >
               <span className="hover:bg-gray-500"><RiHome3Line className="ml-2" /></span> <p> صفحه نخست </p></li>

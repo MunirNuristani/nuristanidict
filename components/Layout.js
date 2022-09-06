@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from './nav/Footer'
 import Header from './nav/Header'
 import MenuItems from './nav/MenuItems'
+import styles from '../styles/Home.module.css'
 
 
 
@@ -9,7 +10,7 @@ function Layout({children}) {
   return (
     <div>
       <Header /> 
-      <div className="min-h-[67vh] sm:min-h-[78vh]">
+      <div className={styles.mainContainer}>
         {children}
       </div>
       <MenuItems />
