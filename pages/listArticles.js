@@ -13,7 +13,6 @@ function ListArticles({ listOfArticles, error }) {
   const cells = " text-right pr-2 hover:cursor-pointer border-b border-gray-300"
   const cells2 = " text-right border-b border-gray-300"
   const [sortedArticles, setSortedArticles] = useState([])
-  const rexArabic = XRegExp("^\\p{Arabic}+$")
   const handleClick = (e, el) => {
     e.preventDefault()
     dispatch({ type: "LOADINGPAGE", payload: true })
