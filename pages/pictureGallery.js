@@ -29,7 +29,7 @@ console.log("gallary: ", imageUrl)
   return (
     <>
     {loadingPage ? <LoadingPage />:
-    <div className="xl:max-w-[1000px] mx-auto py-16 px-4 sm:py-24 sm:px-6 bg-gray-200 my-10 rounded-lg ">
+    <div className="xl:max-w-[1000px] mx-auto py-16 mx-4 sm:px-6 bg-white/90 my-10 rounded-lg ">
       <GridGallery images={displayUrl} />
     </div>}
     

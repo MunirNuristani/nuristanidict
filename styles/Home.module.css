@@ -25,5 +25,10 @@
 } */
 .mainContainer{
   min-height: calc(100vh - 316px)
-  
+}
+
+@media only screen and (max-width: 600px)  {
+  .mainContainer{
+    min-height: calc(100vh - 205px)
+  }
 }

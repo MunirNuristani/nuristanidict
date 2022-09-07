@@ -20,7 +20,7 @@ export default function Alphabets({kalasha, error}) {
         {error? 
             (<SomethingWentWrong />) :(
         loadingPage? <LoadingPage />:(
-        <div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-5 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]">
+        <div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px]">
             <div className='flex  flex-col justify-center items-center text-3xl my-4'>
                 <h3>نورستاني(کلښه الا) به باښ </h3>
                 <h3>د نورستاني (کلښه ژبې) الفبا  </h3>
