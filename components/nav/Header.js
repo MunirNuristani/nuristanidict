@@ -71,8 +71,8 @@ function Header() {
             />
           </div>
         </Link>
-        <div className={`z-[99] flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!shrinkHeader&& 'top-24'} sm:top-2`}>
-          <Hamburger toggled={showMenu} toggle={toggleMenu} direction="left" />
+        <div className={`z-40 flex justify-center items-center h-full -mt-2 absolute right-2 top-2 transition-all ease-in-out duration-1000 ${!shrinkHeader&& 'top-24'} sm:top-2`}>
+          <Hamburger toggled={showMenu} toggle={toggleMenu} direction="left" className={`z-40`} />
         </div>     
       </nav>
       <div className="w-full flex justify-center items-center">
