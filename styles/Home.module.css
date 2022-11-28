@@ -24,7 +24,10 @@
   }
 } */
 .mainContainer{
-  min-height: calc(100vh - 316px)
+  min-height: calc(100vh - 316px);
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 30px;
 }
 
 @media only screen and (max-width: 600px)  {

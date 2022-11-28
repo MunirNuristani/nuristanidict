@@ -45,19 +45,6 @@ function GridGalleryCard({ imageUrl, show }) {
     const [modalUrl, setModalUrl] = useState('/logo_original.png')
     const hidePictureModal = () => setShowPictureModal(false)
 
-    // const imageOrientation = (img) => {
-
-    //     let orientation = ""
-    //     if (img.naturalWidth > img.naturalHeight) {
-    //         orientation = 'landscape';
-    //     } else if (img.naturalWidth < img.naturalHeight) {
-    //         orientation = 'portrait';
-    //     } else {
-    //         orientation = 'even';
-    //     }
-    //     console.log("image Orientation: ",orientation)
-    // }
-
     const showImageinModal = (link, e) => {
         e.preventDefault()
         setShowPictureModal(true)

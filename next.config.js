@@ -15,7 +15,7 @@ module.exports = withPWA({
   reactStrictMode: true,
 
   images: {
-    domains: ['dl.airtable.com', "firebasestorage.googleapis.com"],
+    domains: ["dl.airtable.com", "firebasestorage.googleapis.com", "v5.airtableusercontent.com"],
     formats: ['image/avif', 'image/webp'],
   },
 })

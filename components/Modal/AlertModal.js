@@ -3,7 +3,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { useAppContext } from '../../context/AppContext'
 import {buttonCSS} from '../CSS/TailwindCSS'
 
-function AlertModal() {
+function AlertModal({routeTo=null}) {
   const { state, dispatch } = useAppContext()
   const { showAlertModal, alertModalMessage, alertButton } = state
   const hideAlertModal = () =>{
@@ -16,7 +16,11 @@ function AlertModal() {
         <AiOutlineCloseCircle className="absolute left-5 text-2xl hover:text-[red] hover:cursor-pointer top-5" onClick={() => hideAlertModal()} />
         <div className="flex flex-col justify-center items-center">
          <div dir="rtl" className="text-2xl">{alertModalMessage}</div>
-          <button className={`${buttonCSS} text-3xl mt-10`} onClick={() => hideAlertModal()}> {alertButton}</button>
+          <button className={`${buttonCSS} text-3xl mt-10`} onClick={() =>{
+          hideAlertModal()
+          routeTo()
+          }}
+          > {alertButton}</button>
         </div>
       </div>
     </div>
