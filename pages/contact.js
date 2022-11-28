@@ -13,24 +13,33 @@ function Contacts() {
   const { state, dispatch } = useAppContext();
   const {loadingPage} = state
   console.log(state)
+  const routeHome = ()=>{
+    router.push('/')
+  }
   
+  useEffect(()=>{
+    dispatch({type:"LOADINGPAGE", payload:false})
+  },[dispatch])
  
 
   const handleSubmit = () =>{
+    dispatch({type:"LOADINGPAGE", payload:true})
     try{
     messages.create([
       {fields: {...message}}
     ]).then(()=>{
       dispatch({type: "MULTIPLE_ASSIGNMENT", payload:{
         showAlertModal: true,
-        alertModalMessage: " تشکر از شما \n .پیام شما موفقانه ارسال شد "
+        alertModalMessage: " تشکر از شما \n پیام شما موفقانه ارسال شد.",
+        loadingPage: false
       }})
     })}
     catch (error)
       {
         dispatch({type: "MULTIPLE_ASSIGNMENT", payload:{
           showAlertModal: true,
-          alertModalMessage: "متاسف استیم \nپیام شما ارسال نشد. لطفاً دوباره کوشش کنید.   "
+          alertModalMessage: "متاسف استیم \nپیام شما ارسال نشد. لطفاً دوباره کوشش کنید.",
+          loadingPage:false
         }}) 
       } 
     
@@ -38,6 +47,8 @@ function Contacts() {
    
   }
   return (
+    <>
+    { loadingPage? <LoadingPage/>:
     <div dir='rtl' className="container mt-10 md:mt-[120px] sm:mt-[20px] flex flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl px-16 py-5 rounded-xl xl:max-w-[1200px] lg:max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl">
       <h2 className='text-3xl text-center'>تماس با ما </h2>
       <p className="text-justify"> هموطن و همزبان گرانقدر! <br/>
@@ -56,10 +67,8 @@ function Contacts() {
           className={`${validation.name? "border-red-600 border-2":""} rounded-lg px-4`}
           value = {message.Name}
           onChange={e => {
-            setMessage({ ...message, Name: e.target.value })
-            {message.Name.length!==0 && (message.Name.length <3 || message.Name.length>25?
-            setValidation({...validation, name:true}): setValidation({...validation, name:false}))}
-          }}
+            setMessage({ ...message, Name: e.target.value })}}
+           
         />
         <p className={`${validation.name? "text-red-600":"hidden"}`}>  تام تان بین ۳ الی ۲۵ حرف باشد</p>
       </div>
@@ -110,7 +119,7 @@ function Contacts() {
         <button
           type="submit"
           className={`${buttonCSS} disabled:bg-gray-400 disabled:border-gray-400`}
-          disabled={validation.name || validation.email || validation.message}
+          disabled={!validation.name || !validation.email || !validation.message}
           onClick={() => {
             handleSubmit()
           }}
@@ -128,8 +137,9 @@ function Contacts() {
           {" "}انصراف{" "}
         </button>
       </div>
-      <AlertModal />
-    </div>
+      <AlertModal routeTo={routeHome}/>
+    </div>}
+    </>
   );
 }
 

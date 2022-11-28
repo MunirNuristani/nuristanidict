@@ -16,7 +16,7 @@ export default function Index({allBooks}) {
 
 
   return (
-    <div className="container mt-10 md:mt-[120px] sm:mt-[20px] flex  flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 sm:p-2 rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
+    <div className="container mt-10 md:mt-[120px] sm:mt-[20px] flex  flex-col justify-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl p-12 sm:p-2 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] text-xl relative">
       <div dir="rtl" className="w-full flex flex-row flex-wrap flex-grow">
       {newBooks.map(book=>(
         <div key={book.index}

@@ -41,7 +41,8 @@ function ListArticles({ listOfArticles, error }) {
   return (
     <>
       {error ? <SomethingWentWrong /> :
-        loadingPage ? <LoadingPage /> : (<div dir='rtl' className=" my-10  flex flex-col justify-center mx-auto bg-white p-16  rounded-xl max-w-[900px] md:max-w-[700px] sm:max-w-[360px] text-xl ">
+        loadingPage ? <LoadingPage /> : 
+          (<div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-xl">
           <div className=" text-xl sm:hidden flex justify-center" >
             <table dir="rtl" className=" text-xl sm:hidden">
               <thead className=" text-center">
