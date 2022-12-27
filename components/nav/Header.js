@@ -101,12 +101,12 @@ function Header() {
       <div>
         <div
           dir="rtl"
-         className='flex flex-row justify-center flex-wrap px-10  text-2xl bg-[#3772a6] text-[#f0f0f0] sm:hidden'>
+          className='flex flex-row justify-center flex-wrap px-10 items-center text-2xl bg-[#306090] text-[#f0f0f0] sm:hidden'>
           {menuItems.map((item,idx)=>(
             <div key={idx}
               className={CSS}
               onClick={() => handleRouting({ pathname: item.pathName })} >
-                {/* {item.icon} */}
+                 {item.icon} 
               <p> {item.name}</p>
             </div>
           ))}

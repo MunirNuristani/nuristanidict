@@ -1,37 +1,18 @@
-.button{
-  color:blue
+.backGroundContainer{
+  background-color: #F2F2F2;
 }
-
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-/* .image-container {
-  width: 100%;
-
-  > div {
-    position: unset !important;
-  }
-
-  .image {
-    object-fit: contain;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
-  }
-} */
 .mainContainer{
   min-height: calc(100vh - 316px);
   display: flex;
   justify-content: center;
-  margin: 10px 0 30px;
 }
 
 @media only screen and (max-width: 600px)  {
   .mainContainer{
     min-height: calc(100vh - 205px)
   }
+  .grid {
+       width: 100%;
+       flex-direction: column;
+     }
 }
