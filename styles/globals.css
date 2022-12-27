@@ -17,11 +17,7 @@ body {
   font-family: 'Lateef', 'Poppins',cursive;
   position: relative;
   min-height: 100vh;
-  /* background-color:var(--main-bg-color); */
-  background-image: url('/background_frame.jpg');
   
-
-   
 }
 
 p{

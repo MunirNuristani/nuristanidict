@@ -19,6 +19,7 @@
     "react-dom": "18.0.0",
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^6.0.0-0",
+    "react-lordicon": "^1.0.2",
     "react-visibility-sensor": "^5.1.1",
     "tailwind": "^2.2.0",
     "utf8": "^3.0.0",

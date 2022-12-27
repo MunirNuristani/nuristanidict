@@ -14,7 +14,7 @@ function MainpageHero() {
                 Our mission is to keep Nuristani culture and language alive.</h2>
             </div>
             <div className="flex justify-center items-center my-10"  >
-                <div style={{width:'300px', height:'50vh', position:'relative'}} className="opacity-75"> 
+                <div style={{width:'300px', height:'50vh', position:'relative'}} className="border-2 rounded"> 
                     <Image src={img} alt="Goddess Gesh" layout="fill" />
                 </div>
             </div>

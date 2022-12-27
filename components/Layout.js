@@ -6,12 +6,14 @@ import styles from '../styles/Home.module.css'
 
 
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <div>
-      <Header /> 
-      <div className={styles.mainContainer}>
-        {children}
+      <Header />
+      <div className={styles.backGroundContainer}>
+        <div className={styles.mainContainer}>
+          {children}
+        </div>
       </div>
       <MenuItems />
       <Footer />

@@ -16,13 +16,13 @@ export default function Index({listOfArticles, error }) {
 
 
   return (
-    <div>
+    <>
       {error? <SomethingWentWrong />:(
         loadingPage ? 
           <LoadingPage /> :
           <MainLandingPage />)
       }
-    </div>
+    </>
   )
 }
 export async function getServerSideProps() {

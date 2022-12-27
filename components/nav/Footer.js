@@ -28,7 +28,7 @@ function Footer() {
 
   return (
     <footer
-      className={`z-30 -bottom-1 flex flex-col justify-around w  mx-auto  bg-[#F2F2F2] p-2 text-[#1B57A6] w-full  border-t-2 border-[#1B57A6]`}
+      className={`z-30 -bottom-1 flex flex-col justify-around  mx-auto  bg-[#F2F2F2] p-2 text-[#1B57A6] w-full  border-t-2 border-[#1B57A6]`}
       dir="rtl"
     >
      
