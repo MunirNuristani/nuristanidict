@@ -57,12 +57,6 @@ function Footer() {
           >
             <p>الفبای کلښه الا</p>
           </li>
-          {/* <li
-            className={CSS}
-            onClick={() => handleRouting({ pathname: "/about" })}
-          >
-            <p> گرامر زبان نورستانی </p>
-          </li> */}
           <li
             className={CSS}
             onClick={() => handleRouting({ pathname: "/dictionary/dictionary" })}
@@ -85,7 +79,7 @@ function Footer() {
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/pictureGallery" })}
+            onClick={() => handleRouting({ pathname: "/photos/pictureGallery" })}
           >
             <p> گالری عکس ها </p>
           </li>

@@ -58,7 +58,7 @@ function Header() {
     {
       name: "گالری عکس ها",
       icon: <AiOutlinePicture className = "ml-2" />,
-      pathName: '/pictureGallery'
+      pathName: '/photos/pictureGallery'
     },
     {
       name: "تماس",
