@@ -45,7 +45,7 @@ function CardContainer() {
       icon: <AiOutlinePicture size={50} className="text-[#f0f0f0]" />,
       alterIcon: <AiFillPicture size={50} className="text-[#f0f0f0]" />,
       type: 'pic',
-      route: '/pictureGallery'
+      route: '/llery'
     },
     {
       title: "فرهنگ لغات",
@@ -71,12 +71,12 @@ function CardContainer() {
             className='relative flex flex-col justify-center flex-wrap w-[300px] h-[400px] border-2 border-[#f0f0f0] rounded-xl m-3  md:mx-auto'
             onMouseEnter={() => setChange({ ...change, [card.type]: true })}
             onMouseLeave={() => setChange({ ...change, [card.type]: false })}
-            >
+          >
             <div className='absolute top-4 flex flex-col justify-center items-center flex-wrap bg-[#306090] ' >
-              <div className= "flex flex-col justify-center items-center" >
-                { !change[card.type] ? card.icon : card.alterIcon }
+              <div className="flex flex-col justify-center items-center" >
+                {!change[card.type] ? card.icon : card.alterIcon}
                 <h2 className=" text-[#f0f0f0] "> {card.title} </h2>
-                <p className=" text-xl text-[#f0f0f0] px-3 text-justify ">{ card.text }</p>
+                <p className=" text-xl text-[#f0f0f0] px-3 text-justify ">{card.text}</p>
               </div>
             </div>
             <div className="absolute flex justify-center bottom-0 w-full">
@@ -87,17 +87,6 @@ function CardContainer() {
           </div>
         ))
         }
-        {/* <div className="flex flex-col justify-center items-center w-1/4  md:w-full md:items-start md:m-4" >
-          <p className="text-2xl text-[#f0f0f0]">فرهنگ لغات</p>
-          <div className="relative w-full  ">
-
-            <div className="absolute  md:w-3/4 md:left-10 md:-top-20 border-2 bg-white !opacity-100 p-4 rounded-lg z-20">
-              <p className=" text-2xl ">
-              </p>
-              <button className={`${buttonCSS} text-2xl text-center mx-auto`} onClick={() => { handleRouting('') }}> فرهنگ لغات </button> 
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   )

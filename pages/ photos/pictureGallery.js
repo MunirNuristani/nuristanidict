@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { storage } from '../utils/firebase-config'
+import { storage } from '../../utils/firebase-config'
 import { getDownloadURL, ref, listAll } from "firebase/storage";
-import { useAppContext } from '../context/AppContext'
-import LoadingPage from '../components/LoadingPage';
-import GridGallery from '../components/gallary/GridGallary';
+import { useAppContext } from '../../context/AppContext'
+import LoadingPage from '../../components/LoadingPage';
+import GridGallery from '../../components/gallary/GridGallary';
 
 function PictureGallery({imageUrl}) {
   const {state, dispatch} = useAppContext();
