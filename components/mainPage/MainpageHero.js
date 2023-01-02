@@ -15,7 +15,7 @@ function MainpageHero() {
             </div>
             <div className="flex justify-center items-center my-10"  >
                 <div style={{width:'300px', height:'50vh', position:'relative'}} className="border-2 rounded"> 
-                    <Image src={img} alt="Goddess Gesh" layout="fill" />
+                    <Image src={img} alt="Nuristani Carving" layout="fill" />
                 </div>
             </div>
         </div>
