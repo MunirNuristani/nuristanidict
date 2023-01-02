@@ -44,8 +44,8 @@ function PictureGallery({ imageUrl }) {
   return (
     <>
       {loadingPage ? <LoadingPage /> :
-        <div>
-          <div className="w-[1000px] mx-auto pb-10 mx-4 sm:px-6 bg-white/90 my-10 rounded-lg sm:py-16 md:w-auto">
+        <div className="container my-10 md:mt-[120px] flex flex-col mx-auto bg-white rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-xl">
+          <div className=" w-full mx-auto pb-10 mx-4 sm:px-6 bg-white/90 rounded-lg sm:py-16 ">
             <div className="flex flex-row w-full justify-around h-[50px] mb-5 wrap sm:flex-col sm:items-center sm:pb-5" dir="rtl">
               <div className={activeTab == "nuristanPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("nuristanPics")}> تصاویر مناظر نورستان </div>
               <div className={activeTab == "culturalPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("culturalPics")} > تصاویر تاریخی و فرهنگی نورستان</div>
