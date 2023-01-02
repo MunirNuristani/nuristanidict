@@ -10,6 +10,7 @@ export default function Index({listOfArticles, error }) {
 
   const { state, dispatch } = useAppContext()
   const { loadingPage } = state
+  
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false })
   }, [])

@@ -19,12 +19,11 @@ function Header() {
   const toggleMenu = () => {
     dispatch({ type: "SHOWMENU", payload: !showMenu })
   }
+
   const handleRouting = (route) => {
     router.push(route)
     dispatch({
-      type: "MULTIPLE_ASSIGNMENT", payload: {
-        loadingPage: true,
-      }
+      type: "LOADINGPAGE", payload: true,
     })
   }
 
@@ -58,7 +57,7 @@ function Header() {
     {
       name: "گالری عکس ها",
       icon: <AiOutlinePicture className = "ml-2" />,
-      pathName: '/photos/pictureGallery'
+      pathName: '/pictureGallery'
     },
     {
       name: "تماس",
@@ -105,7 +104,7 @@ function Header() {
           {menuItems.map((item,idx)=>(
             <div key={idx}
               className={CSS}
-              onClick={() => handleRouting({ pathname: item.pathName })} >
+              onClick={() => handleRouting(item.pathName )} >
                  {item.icon} 
               <p> {item.name}</p>
             </div>

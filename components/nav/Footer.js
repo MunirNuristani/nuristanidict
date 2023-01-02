@@ -79,7 +79,7 @@ function Footer() {
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/photos/pictureGallery" })}
+            onClick={() => handleRouting({ pathname: "/pictureGallery" })}
           >
             <p> گالری عکس ها </p>
           </li>

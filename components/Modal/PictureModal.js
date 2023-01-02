@@ -1,17 +1,27 @@
 import React from 'react'
-import { AiOutlineCloseCircle } from 'react-icons/ai'
-import Image from 'next/image' 
+import { IoMdCloseCircleOutline } from 'react-icons/io'
+import Image from 'next/image'
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+function PictureModal({ showPictureModal, hidePictureModal, selectedImage, images }) {
 
-function PictureModal({showPictureModal, hidePictureModal, linkurl}) {
-  
   return (
-    <div className={`verflow-y-auto overflow-x-hidden z-[99]  w-full md:inset-0 h-modal md:h-full fixed flex justify-center items-center inset-0 bg-gray-600 bg-opacity-90 overflow-y-auto h-full w-full ${!showPictureModal && 'hidden'}`} onClick={() => hidePictureModal()}>
-      <div className='relative w-[600px] h-[400px] md:w-[800px] md:h-[600px] lg:w-[1000px] lg:h-[600px] xl:w-[1200px] xl:h-[700px]  rounded bg-[white] shadow-lg '>
-       
-        <AiOutlineCloseCircle className=" z-[99] absolute right-2 text-6xl text-gray-500 hover:text-[red] hover:cursor-pointer top-5" onClick={() => hidePictureModal()} />
-        <div className="relative flex justify-center items-center  h-full wx-auto">   
-          <Image src={linkurl} alt={linkurl} layout='fill' objectFit='contain' />
+    <div className={`verflow-y-auto overflow-x-hidden z-[99]  w-full md:inset-0 h-modal md:h-full fixed flex justify-center items-center inset-0 bg-gray-600 bg-opacity-90 overflow-y-auto h-full w-full ${!showPictureModal && 'hidden'}`}>
+      <div className='relative w-[600px] h-[400px] md:w-[800px] md:h-[600px] lg:w-[1000px] lg:h-[600px] xl:w-[1200px] xl:h-[700px]  rounded bg-[white] shadow-lg flex justify-center items-center m-auto p-auto '>
+
+        <IoMdCloseCircleOutline className=" z-[99] absolute right-2 text-4xl text-gray-500 text-[red] hover:cursor-pointer top-5" onClick={() => hidePictureModal()} />
+        <div className=" absolute top-0 right-0">
+          <Carousel showArrows={true} showThumbs={false} autoFocus={true} showIndicators={false} dynamicHeight={false}>
+            <div className=" w-[600px] h-[400px] md:w-[800px] md:h-[600px] lg:w-[1000px] lg:h-[600px] xl:w-[1200px] xl:h-[700px]">
+              <img src={selectedImage} alt="selected Image" />
+            </div>
+            {images && images.map((image, ind) => (
+              <div key={ind} className=" absolute top-0 right-0 w-[600px] h-[400px] md:w-[800px] md:h-[600px] lg:w-[1000px] lg:h-[600px] xl:w-[1200px] xl:h-[700px]">
+                <img src={image} alt="images" />
+              </div>
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ function ListArticles({ listOfArticles, error }) {
   const cells = " text-right pr-2 hover:cursor-pointer border-b border-gray-300"
   const cells2 = " text-right border-b border-gray-300"
   const [sortedArticles, setSortedArticles] = useState([])
+
   const handleClick = (e, el) => {
     e.preventDefault()
     dispatch({ type: "LOADINGPAGE", payload: true })
@@ -23,7 +24,6 @@ function ListArticles({ listOfArticles, error }) {
   }
 
   useEffect(() => {
-    dispatch({ type: "LOADINGPAGE", payload: false })
     setSortedArticles(listOfArticles.sort((a, b) => {
       let nameA = a.fields.Article_Name
       let nameB = b.fields.Article_Name
@@ -35,9 +35,10 @@ function ListArticles({ listOfArticles, error }) {
       }
       return 0;
     }));
+    dispatch({ type: "LOADINGPAGE", payload: false })
   },[listOfArticles])
 
-  console.log("list: ", listOfArticles.sort((a, b) => a === b ? 0 : a < b ? -1 : 1))
+
   return (
     <>
       {error ? <SomethingWentWrong /> :

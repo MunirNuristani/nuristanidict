@@ -31,7 +31,7 @@ function MenuItems() {
             <li className={CSS} onClick={() => handleRouting({ pathname: '/dictionary/dictionary' })}><span><RiBook3Line className="ml-2" /></span> <p> قاموس </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/listArticles' })}><span><RiPenNibLine className="ml-2" /></span> <p> مقالات </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/bookList' })}><span><RiBook3Line className="ml-2" /></span> <p> کتب </p></li>
-            <li className={CSS} onClick={() => handleRouting({ pathname: '/photos/pictureGallery' })}>
+            <li className={CSS} onClick={() => handleRouting({ pathname: '/pictureGallery' })}>
               <span><AiOutlinePicture className="ml-2" /></span> <p> گالری عکس ها </p></li>
             <li className={CSS} onClick={() => handleRouting({ pathname: '/contact' })}>
               <span><RiChat3Line className="ml-2" /></span> <p> تماس </p></li>

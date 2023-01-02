@@ -4,6 +4,7 @@ import PictureModal from "../Modal/PictureModal";
 import Image from "next/image"
 
 
+
 export default function GridGallery({ images }) {
     const [imagesShownArray, setImagesShownArray] = useState(
         Array(images.length).fill(false)
@@ -20,6 +21,7 @@ export default function GridGallery({ images }) {
 
     return (
         <div className="flex flex-grow flex-wrap justify-center items-center">
+      
             {images &&
                 images.map((imageUrl, index) =>
                     <VisibilitySensor
@@ -32,15 +34,18 @@ export default function GridGallery({ images }) {
                             <GridGalleryCard
                                 imageUrl={imageUrl}
                                 show={imagesShownArray[index]}
+                                images = {images}
                             />
                         </div>
                     </VisibilitySensor>
                 )}
+
+            
         </div>
     );
 }
 
-function GridGalleryCard({ imageUrl, show }) {
+function GridGalleryCard({ imageUrl, show , images}) {
     const [showPictureModal, setShowPictureModal] = useState(false)
     const [modalUrl, setModalUrl] = useState('/logo_original.png')
     const hidePictureModal = () => setShowPictureModal(false)
@@ -63,7 +68,7 @@ function GridGalleryCard({ imageUrl, show }) {
                     <Image src={imageUrl} alt="" layout="fill" objectFit="contain"  />
                 </div>
             </div>
-            <PictureModal showPictureModal={showPictureModal} hidePictureModal={hidePictureModal} linkurl={modalUrl} />
+            <PictureModal showPictureModal={showPictureModal} hidePictureModal={hidePictureModal} selectedImage={modalUrl} images={images} />
         </>
     );
 }
