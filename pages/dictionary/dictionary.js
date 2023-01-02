@@ -73,9 +73,6 @@ function Dictionary() {
     setSearchValue('')
   }
 
-
-  // setDisplaySelectedWord({Word:" "})
-
   return (
     <>{loadingPage ? <LoadingPage /> :
       <div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-4xl">
