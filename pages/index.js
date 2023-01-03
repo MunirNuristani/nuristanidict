@@ -13,7 +13,7 @@ export default function Index({listOfArticles, error }) {
   
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false })
-  }, [])
+  }, [listOfArticles])
 
 
   return (

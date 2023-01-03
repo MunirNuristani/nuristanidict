@@ -11,6 +11,7 @@ function Footer() {
   const router = useRouter();
   const { state, dispatch } = useAppContext();
   const { mobileMenu } = state;
+
   const handleRouting = route => {
     router.push(route);
     dispatch({
@@ -48,18 +49,18 @@ function Footer() {
           <p dir="rtl" className="text-3xl lg:hidden mr-4">نهاد فرهنگی میرزا تازه گل خان  </p> 
       </div>
         <ul className="flex flex-col justify-center flex-wrap md:flex-col md:w-full border-r-2 border-[#121b33] lg:pr-4 xl:pr-12">
-          <li className={CSS} onClick={() => handleRouting({ pathname: "/" })}>
+          <li className={CSS} onClick={() => handleRouting( "/" )}>
             <p> صفحه نخست </p>
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/alphabets" })}
+            onClick={() => handleRouting("/alphabets" )}
           >
             <p>الفبای کلښه الا</p>
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/dictionary/dictionary" })}
+            onClick={() => handleRouting( "/dictionary/dictionary")}
           >
             <p> قاموس </p>
           </li>
@@ -67,25 +68,25 @@ function Footer() {
         <ul className="flex flex-col justify-center flex-wrap  md:flex-col  lg:pr-4 xl:pr-12 md:w-full border-r-2 border-[#121b33]">
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/listArticles" })}
+            onClick={() => handleRouting( "/listArticles" )}
           >
             <p> مقالات </p>
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/bookList" })}
+            onClick={() => handleRouting( "/bookList" )}
           >
             <p> کتب </p>
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/pictureGallery" })}
+            onClick={() => handleRouting( "/pictureGallery" )}
           >
             <p> گالری عکس ها </p>
           </li>
           <li
             className={CSS}
-            onClick={() => handleRouting({ pathname: "/contact" })}
+            onClick={() => handleRouting( "/contact" )}
           >
             <p> تماس </p>
           </li>

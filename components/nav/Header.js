@@ -22,11 +22,11 @@ function Header() {
   }
 
   const handleRouting = (route , alias) => {
-    router.push(route)
-    setActiveMenu(alias)
     dispatch({
       type: "LOADINGPAGE", payload: true,
     })
+    router.push(route)
+    setActiveMenu(alias)
   }
 
   const menuItems = [
