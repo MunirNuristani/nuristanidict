@@ -116,7 +116,7 @@ function Footer() {
           {" "}حق تکثیر محفوظ است &copy; {year}{" "}
         </p>
         <p className="flex flex-row justify-center items-center" dir='ltr'>
-          { <MdOutlineBuildCircle /> }&nbsp;Munir Nuristani{" "}
+          { <MdOutlineBuildCircle /> }&nbsp;nuristani.dev{" "}
         </p>
       </div>
     </footer>

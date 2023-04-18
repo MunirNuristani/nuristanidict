@@ -45,7 +45,7 @@ function CardContainer() {
       icon: <AiOutlinePicture size={50} className="text-[#f0f0f0]" />,
       alterIcon: <AiFillPicture size={50} className="text-[#f0f0f0]" />,
       type: 'pic',
-      route: '/llery'
+      route: '/pictureGallery'
     },
     {
       title: "فرهنگ لغات",
