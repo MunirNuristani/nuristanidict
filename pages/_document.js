@@ -56,7 +56,6 @@ export default function MyDocument() {
       </Head>
       <body>
         <title> نهاد فرهنگی میرزا تازه گل خان </title>
-
         <Main />
         <NextScript />
       </body>
