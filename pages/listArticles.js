@@ -4,15 +4,22 @@ import { useRouter } from 'next/router'
 import SomethingWentWrong from '../components/SomethingWentWrong'
 import { useAppContext } from '../context/AppContext'
 import LoadingPage from '../components/LoadingPage'
-
+import { phrases } from '../utils/i18n'
 
 function ListArticles({ listOfArticles, error }) {
+  const { articleTitle, articleAuthor } = phrases
+  const lan = (typeof window !== "undefined" && localStorage.getItem("lan"))
   const { state, dispatch } = useAppContext()
   const { loadingPage } = state
+  const [ dir, setDir] = useState('')
   const router = useRouter()
   const cells = " text-right pr-2 hover:cursor-pointer border-b border-gray-300"
   const cells2 = " text-right border-b border-gray-300"
   const [sortedArticles, setSortedArticles] = useState([])
+  
+  useEffect(() => {
+    setDir(lan === "en" ? "ltr" : "rtl")
+  }, [lan])
 
   const handleClick = (e, el) => {
     e.preventDefault()
@@ -43,15 +50,14 @@ function ListArticles({ listOfArticles, error }) {
     <>
       {error ? <SomethingWentWrong /> :
         loadingPage ? <LoadingPage /> : 
-          (<div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-xl">
+          (<div dir={dir} className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-xl">
           <div className=" text-xl sm:hidden flex justify-center" >
-            <table dir="rtl" className=" text-xl sm:hidden">
+            <table dir={dir} className=" text-xl sm:hidden">
               <thead className=" text-center">
                 <tr>
-                  <th className={`${cells} text-3xl border-gray-500`}> عناوین مقاله
-                  </th>
+                  <th className={`${cells} text-3xl border-gray-500`}> { articleTitle[lan]} </th>
                   <th className={`${cells2} text-3xl border-gray-500`}>
-                    نویسنده
+                    {articleAuthor[lan]}
                   </th>
                 </tr>
               </thead>
@@ -69,10 +75,10 @@ function ListArticles({ listOfArticles, error }) {
 
           </div>
           <div className=" text-xl md:hidden lg:hidden xl:hidden sm:block flex justify-center" >
-            <table dir="rtl" className=" text-xl  ">
+            <table dir={dir} className=" text-xl  ">
               <thead className=" text-center">
                 <tr>
-                  <th className={`${cells} text-3xl border-gray-500`}> عناوین مقاله
+                  <th className={`${cells} text-3xl border-gray-500`}> {articleTitle[lan]}
                   </th>
                 </tr>
               </thead>
@@ -82,7 +88,7 @@ function ListArticles({ listOfArticles, error }) {
                     <td className={cells}
                       onClick={(e) => { handleClick(e, el.id) }}
                     > {el.fields.Article_Name} <br />
-                      <span>نویسنده: </span><span className='w-full text-left'>{el.fields.Author_Name}</span></td>
+                      <span>{articleAuthor[lan]}: </span><span className='w-full text-left'>{el.fields.Author_Name}</span></td>
                   </tr>))}
               </tbody>
             </table>

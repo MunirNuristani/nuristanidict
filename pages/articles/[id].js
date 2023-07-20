@@ -16,7 +16,8 @@ function AricleDetail({ listOfArticles, error }) {
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false })
     setSortedImages(articleToDisplay[0]?.fields.Pictures?.sort((a, b) => a.filename > b.filename ? 1 : (a.filename < b.filename ? -1 : 0)))
-  }, [listOfArticles])
+  }, [listOfArticles, dispatch, articleToDisplay])
+  
   console.log(sortedImages)
   return (
     <>

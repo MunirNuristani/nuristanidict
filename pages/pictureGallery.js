@@ -4,12 +4,22 @@ import { getDownloadURL, ref, listAll } from "firebase/storage";
 import { useAppContext } from '../context/AppContext'
 import LoadingPage from '../components/LoadingPage';
 import GridGallery from '../components/gallary/GridGallary';
+import { phrases } from '../utils/i18n';
+
 
 function PictureGallery({ imageUrl }) {
+  const { landscapeImages, historyImages } = phrases
   const { state, dispatch } = useAppContext();
   const { loadingPage } = state
   const [displayUrl, setDisplayUrl] = useState([])
+  const [dir, setDir] = useState('')
   const [activeTab, setActiveTab] = useState("nuristanPics")
+  const lan = (typeof window !== "undefined" && localStorage.getItem('lan'))
+
+  useEffect(() => {
+    setDir(lan === "en" ? "ltr" : "rtl")
+  }, [lan])
+
   const tabCSS = "border-2 border-black rounded-t-lg text-xl w-1/2 h-full flex justify-center items-center sm:my-3 sm:w-full sm:text-xl hover:cursor-pointer sm:rounded-lg"
   const activeTabCSS = `${tabCSS} border-[#306090] border-4 text-2xl bg-[#306090] text-[#f0f0f0]`
 
@@ -23,7 +33,7 @@ function PictureGallery({ imageUrl }) {
         .catch((error) => console.log(error));
     })
     setDisplayUrl(displays)
-  }, [imageUrl, loadingPage])
+  }, [imageUrl, loadingPage, dispatch])
 
   const changeTab = async (tab) => {
     let displays = []
@@ -46,9 +56,9 @@ function PictureGallery({ imageUrl }) {
       {loadingPage ? <LoadingPage /> :
         <div className="container my-10 md:mt-[120px] flex flex-col mx-auto bg-white rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-xl">
           <div className=" w-full mx-auto pb-10  sm:px-6 bg-white/90 rounded-lg sm:py-16 ">
-            <div className="flex flex-row w-full justify-around h-[50px] mb-5 wrap sm:flex-col sm:items-center sm:pb-5" dir="rtl">
-              <div className={activeTab == "nuristanPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("nuristanPics")}> تصاویر مناظر نورستان </div>
-              <div className={activeTab == "culturalPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("culturalPics")} > تصاویر تاریخی و فرهنگی نورستان</div>
+            <div className="flex flex-row w-full justify-around h-[50px] mb-5 wrap sm:flex-col sm:items-center sm:pb-5" dir={dir}>
+              <div className={activeTab == "nuristanPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("nuristanPics")}> {landscapeImages[lan]} </div>
+              <div className={activeTab == "culturalPics" ? activeTabCSS : tabCSS} onClick={() => changeTab("culturalPics")} > {historyImages[lan]}</div>
             </div>
             <GridGallery images={displayUrl} />
           </div>
