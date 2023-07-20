@@ -20,7 +20,7 @@ function MainpageHero() {
                 <h2 dir={dir} className=" text-2xl text-right sm:text-center  "> {statementTitle[lan]}</h2>
             </div>
             <div className="flex justify-center items-center my-10"  >
-                <div className=" w-[300px] h-[500px] relative border-2 rounded"> 
+                <div className=" w-[300px] h-[430px] relative border-2 rounded"> 
                     <Image src={img} alt="Nuristani Carving" layout="fill" />
                 </div>
             </div>

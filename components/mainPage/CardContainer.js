@@ -55,7 +55,6 @@ function CardContainer() {
       alterIcon: <AiFillPicture size={50} className="text-[#f0f0f0]" />,
       type: 'pic',
       route: '/pictureGallery'
-
     },
     {
       title: dictionary[lan],
