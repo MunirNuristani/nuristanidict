@@ -30,6 +30,7 @@ function LanguageModal() {
                 <div dir="ltr" className="text-left w-full" >Please select desired Language.</div>
               </label>
               <select id="my-select" defaultValue={lan ?? "prs"} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={(e) => setLan(e.target.value)}>
+                <option className="placeholder:text-[gray]">Select One/ یکی را انتخاب کنید </option>
                 <option value="nr">نورستانی (کلښه الا)</option>
                 <option value="prs" > دری </option>
                 <option value="ps"> پښتو </option>
@@ -39,9 +40,11 @@ function LanguageModal() {
 
 
           </div>
-          <button dir="ltr" className={`${buttonCSS} text-2xl mt-10`} onClick={() => {
-            setLanguageSelection()
-          }}
+          <button
+            dir="ltr" 
+            className={`${buttonCSS} text-2xl mt-10`} 
+            onClick={() => setLanguageSelection()}
+            disabled= {lan.length>0 ? false : true}
           > Accept / تایید </button>
         </div>
       </div>
