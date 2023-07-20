@@ -4,17 +4,25 @@ import data from '../../WordBank.json'
 import AlertModal from "../../components/Modal/AlertModal";
 import { useAppContext } from '../../context/AppContext'
 import LoadingPage from "../../components/LoadingPage";
+import { phrases } from "../../utils/i18n";
 
 function Dictionary() {
+  const {} = phrases
   const [searchValue, setSearchValue] = useState('')
   const [displayWords, setDisplayWords] = useState([])
   const [displaySelectedWord, setDisplaySelectedWord] = useState([])
   const { state, dispatch } = useAppContext();
   const { loadingPage } = state
+  const [dir, setDir] = useState('')
+  const lan = (typeof window !== 'undefined' && localStorage.getItem('lan'))
+
+  useEffect(() => {
+    setDir(lan === "en" ? "ltr" : "rtl")
+  }, [lan])
 
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false })
-  }, [])
+  }, [dispatch])
 
   const handleSearch = (e, wd = searchValue) => {
     e.preventDefault();
@@ -75,8 +83,8 @@ function Dictionary() {
 
   return (
     <>{loadingPage ? <LoadingPage /> :
-      <div dir='rtl' className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-4xl">
-        <div dir="rtl" className="flex justify-center">
+      <div dir={dir} className="container my-10 md:mt-[120px]  flex flex-col justify-center mx-auto bg-white p-5 rounded-xl max-w-[1000px] md:max-w-[700px] sm:max-w-[360px] sm:mt-[20px] text-4xl">
+        <div dir={dir} className="flex justify-center">
           <h2 className="p-auto">قاموس دری – نورستانی (کلښه الا)</h2>
         </div>
         <form className="flex flex-row sm:flex-col justify-between items-center w-full p-4" onSubmit={(e) => handleSearch(e)}>
@@ -86,12 +94,12 @@ function Dictionary() {
             onClick={(e) => handleSearch(e)}> جستجو</button>
         </form>
         <div className='mx-10 my-5'>
-          <div dir='rtl' className={!displaySelectedWord && "hidden"}>
+          <div dir={dir} className={!displaySelectedWord ? "hidden" : undefined}>
             {displaySelectedWord && displaySelectedWord.map(displayWord => (
               <div key={displayWord.index}>
-                <span className='text-3xl'>{displayWord.Word}</span><span className={`${!displayWord.pronunciation && 'hidden'} text-2xl `}> {`[${displayWord.pronunciation?.trim()}]`}</span> <span className={!displayWord.Meaning && 'hidden'}>:</span>  <span className={`${!displayWord.ABBR && 'hidden'} text-2xl `}> ({displayWord.ABBR?.trim()}) </span> <span className="text-2xl"> {displayWord.Meaning}</span></div>))}
+                <span className='text-3xl'>{displayWord.Word}</span><span className={`${!displayWord.pronunciation? 'hidden' : undefined} text-2xl `}> {`[${displayWord.pronunciation?.trim()}]`}</span> <span className={!displayWord.Meaning ? 'hidden' : undefined}>:</span>  <span className={`${!displayWord.ABBR ? 'hidden' : undefined} text-2xl `}> ({displayWord.ABBR?.trim()}) </span> <span className="text-2xl"> {displayWord.Meaning}</span></div>))}
           </div>
-          <div className={`${displayWords === [] && "hidden"} mt-10`}>
+          <div className={`${displayWords.length===0 ? "hidden" : undefined} mt-10`}>
             <p>لغات دیگر: </p>
             {displayWords.map(wrds => (
               <> <span key={wrds.index} className="text-xl hover:cursor-pointer hover:text-[#1B57A6]" onClick={(e) => { setWord(e, wrds) }}>{wrds}</span><span className="text-xl">،</span></>

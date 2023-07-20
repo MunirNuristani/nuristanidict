@@ -11,6 +11,7 @@
   "dependencies": {
     "airtable": "^0.11.3",
     "better-react-spinkit": "^2.0.4",
+    "caniuse-lite": "^1.0.30001517",
     "firebase": "^9.8.1",
     "hamburger-react": "^2.5.0",
     "next": "12.1.5",
@@ -33,6 +34,7 @@
     "eslint": "8.13.0",
     "eslint-config-next": "^12.0.4",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }

@@ -2,44 +2,44 @@ import React, { useEffect } from 'react'
 import LoadingPage from '../components/LoadingPage'
 import MainLandingPage from '../components/mainPage/MainLandingPage'
 import { useAppContext } from '../context/AppContext'
-import SomethingWentWrong from '../components/SomethingWentWrong'
-import { articles, minifyRecords } from '../utils/airTable'
 
-export default function Index({listOfArticles, error }) {
-  const randomArticle = Math.floor(Math.random() * listOfArticles.length)
 
+
+export default function Index( ) {
   const { state, dispatch } = useAppContext()
   const { loadingPage } = state
   
   useEffect(() => {
+    if (localStorage.getItem('lan') === null) {
+      localStorage.setItem('lan', 'prs')
+    }
     dispatch({ type: "LOADINGPAGE", payload: false })
-  }, [listOfArticles])
+  }, [dispatch])
 
 
   return (
     <>
-      {error? <SomethingWentWrong />:(
-        loadingPage ? 
+      {loadingPage ?
           <LoadingPage /> :
-          <MainLandingPage />)
+          <MainLandingPage />
       }
     </>
   )
 }
-export async function getServerSideProps() {
-  try {
-    const allArticles = await articles.select().all();
-    return {
-      props: {
-        listOfArticles: minifyRecords(allArticles)
-      }
-    }
-  } catch (error) {
-    return {
-      props: {
-        error: true
-      }
-    }
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     const allArticles = await articles.select().all();
+//     return {
+//       props: {
+//         listOfArticles: minifyRecords(allArticles)
+//       }
+//     }
+//   } catch (error) {
+//     return {
+//       props: {
+//         error: true
+//       }
+//     }
+//   }
+// }
 

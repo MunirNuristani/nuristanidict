@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { buttonCSS } from '../CSS/TailwindCSS'
 import { FiBook, FiBookOpen } from 'react-icons/fi'
 import { HiOutlineDocument, HiOutlineDocumentText } from 'react-icons/hi'
@@ -6,14 +6,23 @@ import { AiOutlinePicture, AiFillPicture } from 'react-icons/ai'
 import { GiSecretBook, GiSpellBook } from 'react-icons/gi'
 import { useRouter } from 'next/router'
 import { useAppContext } from '../../context/AppContext'
+import { phrases } from '../../utils/i18n'
 
 function CardContainer() {
+  const {books, booksInfo, articles, articleInfo, pictures, picInfo, dictionary, dicInfo, missionStatement } = phrases
   const [change, setChange] = useState({
     book: false,
     document: false,
     pic: false,
     dic: false
   })
+  const [dir, setDir] = useState("")
+  const lan = (typeof window !== "undefined" && localStorage.getItem('lan'))
+
+  useEffect(() => {
+    setDir(lan === "en" ? "ltr" : "rtl")
+  }, [lan])
+  
   const router = useRouter();
   const { dispatch } = useAppContext()
 
@@ -24,32 +33,32 @@ function CardContainer() {
 
   const cardInfo = [
     {
-      title: "کتاب ها",
-      text: "در این ویب سایت کوشش شده است تا کتب مختلفی که درافغانستان  و  سایر کشور های جهان با زبان های مختلف در باره نورستان انتشار یافته است، گذاشته شود تا علاقمندان بتوانند معلومات مورد نیاز شان را در مورد نورستان از اینجا به دست آورند.",
+      title: books[lan],
+      text: booksInfo[lan],
       icon: <FiBook size={50} className="text-[#f0f0f0]" />,
       alterIcon: <FiBookOpen size={50} className="text-[#f0f0f0]" />,
       type: 'book',
       route: '/bookList'
     },
     {
-      title: "مقالات",
-      text: "در این ویب سایت آن عده مقالات را  یافته می توانید که در مورد تاریخ و فرهنگ نورستان یا کافرستان قدیم از سوی دانشمندان آگاه با مسایل نورستان نگاشته شده است.",
+      title: articles[lan],
+      text: articleInfo[lan],
       icon: <HiOutlineDocument size={50} className="text-[#f0f0f0]" />,
       alterIcon: <HiOutlineDocumentText size={50} className="text-[#f0f0f0]" />,
       type: 'document',
       route: '/listArticles'
     },
     {
-      title: "گالری عکس ها",
-      text: "در این سایت عکس های مناظر زیبای نورستان و مردم نورستان گنجانیده شده است.",
+      title: pictures[lan],
+      text: picInfo[lan],
       icon: <AiOutlinePicture size={50} className="text-[#f0f0f0]" />,
       alterIcon: <AiFillPicture size={50} className="text-[#f0f0f0]" />,
       type: 'pic',
-      route: '/llery'
+      route: '/gallery'
     },
     {
-      title: "فرهنگ لغات",
-      text: "در این سایت سه دکشنری, یکی به نام فرهنگ زبان نورستان(کلښه الا) ترجمه آن با زبان های پشتو و دری, قاموس دری نورستانی(کلښه الا) و فرهنگ نورستانی(به زبان کته) به دسترس خواننده گان قرار داده است",
+      title: dictionary[lan],
+      text: dicInfo[lan],
       icon: <GiSecretBook size={50} className="text-[#f0f0f0]" />,
       alterIcon: <GiSpellBook size={50} className="text-[#f0f0f0]" />,
       type: 'dic',
@@ -60,11 +69,10 @@ function CardContainer() {
   return (
     <div className=" min-w-full bg-[#306090] bg-solid rounded-xl pt-10 my-10 flex flex-col justify-center items-center  md:relative">
       <div className=" items-center justify-center p-8 m-auto">
-        <p className=" text-2xl text-[#f0f0f0] mx-auto text-center mb-10">هدف این صفحه
-          أرایه معلومات دقیق از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد.</p>
+        <p className=" text-2xl text-[#f0f0f0] mx-auto text-center mb-10"> {missionStatement[lan]} </p>
       </div>
 
-      <div className="flex flex-row justify-around w-full md:flex-col md:justify-center ">
+      <div className="flex flex-row flex-wrap justify-around w-full md:flex-col md:justify-center ">
         {cardInfo.map((card, ind) => (
           <div
             key={ind}
@@ -75,8 +83,8 @@ function CardContainer() {
             <div className='absolute top-4 flex flex-col justify-center items-center flex-wrap bg-[#306090] ' >
               <div className="flex flex-col justify-center items-center" >
                 {!change[card.type] ? card.icon : card.alterIcon}
-                <h2 className=" text-[#f0f0f0] "> {card.title} </h2>
-                <p className=" text-xl text-[#f0f0f0] px-3 text-justify ">{card.text}</p>
+                <h2 dir={dir} className=" text-[#f0f0f0] "> {card.title} </h2>
+                <p dir={dir} className=" text-xl text-[#f0f0f0] px-3 text-justify ">{card.text}</p>
               </div>
             </div>
             <div className="absolute flex justify-center bottom-0 w-full">

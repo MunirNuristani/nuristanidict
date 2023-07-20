@@ -3,6 +3,7 @@ import Footer from './nav/Footer'
 import Header from './nav/Header'
 import MenuItems from './nav/MenuItems'
 import styles from '../styles/Home.module.css'
+import LanguageModal from './Modal/LanguageModal'
 
 
 
@@ -17,6 +18,7 @@ function Layout({ children }) {
       </div>
       <MenuItems />
       <Footer />
+      <LanguageModal />
     </div>
   )
 }
