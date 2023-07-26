@@ -56,10 +56,10 @@ export const phrases = {
   },
 
   statementTitle: {
-    en: "Our mission is to keep Nuristani culture and language alive.",
-    prs: "هدف ما زنده نگهداشتن زبان و فرهنگ نورستان است.",
-    ps: "زموږ موخه د نورستان د ژبې او فرهنگ ژوندي ساتل دی.",
-    nr: "یومه بېتات کښۉݩ نورستان به چاک پک نه پؤس بالو ښه وڙ"
+    en: "Our objective is to provide detailed information about the history, language and culture of Nuristan..",
+    prs: "هدف ما ارایه معلومات دقیق از تاریخ، زبان و فرهنگ نورستان می باشد.",
+    ps: "زموږ موخه د نورستان د تاریخ، ژبې او فرهنگ په اړه کره معلوماتو وړاندی کول ده.",
+    nr: "یومه بېتات کښۉݩ، نورستان به تاریخی، الای ،چاک پک به پؤرېݩ مېله مترۉݩ کتي وڙ. "
   },
 
 
@@ -111,9 +111,9 @@ export const phrases = {
   },
   rotate: {
     en: "Please rotate your device to a horizontal position.",
-    prs: "لطفا گوشی خود را به حالت افقی بچرخانید.",
-    ps: "مهرباني وکړئ خپل وسیله افقی موقعیت ته وګرځوئ.",
-    nr: ""
+    prs: "لطفا موبایل خود را به حالت افقی بچرخانید.",
+    ps: "مهرباني وکړئ خپل موبایل افقی موقعیت ته وګرځوئ.",
+    nr: "تـۉ به موبایله وېرچې دام"
   },
 
   landscapeImages: {
@@ -126,7 +126,7 @@ export const phrases = {
     en: "Historical and Cultural Images ",
     prs: "تصاویر تاریخی و فرهنگی نورستان",
     ps: "د نورستان تاریخي او فرهنگي انځورونه",
-    nr: " نورستان به تاریخی چاک پک به چوېر"
+    nr: " نورستان به چاک پک به چوېر"
   },
 
   contactUs: {
@@ -227,74 +227,74 @@ export const phrases = {
   copyWrite: {
     en: "Copyright Reserved",
     prs: "حق تکثیر محفوظ است",
-    ps: "د چاپ حق خوندي دی",
-    nr: "",
+    ps: "د خپرولو حق خوندي دی",
+    nr: "کي اۉرنگه جن، نه ویږݩت بۉ",
   },
   phoneme: {
     en: "Phoneme",
     prs: "صدا / اوا",
     ps: "غږ / فونیم",
-    nr: "",
+    nr: "ڇا",
   },
   confirm: {
     en: "Confirm",
     prs: "تایید",
     ps: "تایید",
-    nr: "",
+    nr: "بوی",
   },
   wordNotFoundMessage: {
     en: "The word you are looking for is not available in our archive. Please contact us and share your desired word so that we can add it to the archive. Thank you for your cooperation.",
     prs: "لغت مورد نظر شما در ارشیف ما موجود نیست. لطفاً با ما تماس گرفته لغت مورد نظر تان را شریک سازید تا آنرا در ارشیف علاوه کنیم. تشکر از همکاری شما.",
     ps: "هغه کلمه چې تاسو یې په لټه کې یاست زموږ په آرشیف کې شتون نلري. مهرباني وکړئ موږ سره اړیکه ونیسئ او خپل مطلوب کلمه شریک کړئ ترڅو موږ یې په آرشیف کې اضافه کړو. ستاسو د همکارۍ څخه مننه.",
-    nr: "",
+    nr: "تـۉ چېري اوړي باښ یومه ارشیف که نه وڙ. سی باښه یمه که توچ ته، تشو یومه ارشیف که چیتروڙمیش",
   },
-  nowWordMessage: {
+  newWordMessage: {
     en: "Please enter the word you are looking for in the specified box.",
     prs: "لطفاً لغت مورد نظر تان را در چوکات وارد کنید.",
     ps: "مهرباني وکړئ هغه کلمه چې تاسو یې غواړئ په ټاکل شوي بکس کې دننه کړئ.",
-    nr: "",
+    nr: "تـۉ چېري اوړي باښه چوکاټ که چیتراو",
   },
   msgSentSuccess: {
     en: "Thank you \n. Your message has been successfully sent.",
     prs: " تشکر از شما \n پیام شما موفقانه ارسال شد.",
     ps: "مننه\n . ستاسو پیغام په بریالیتوب سره لیږل شوی.",
-    nr: "",
+    nr: "بوېݩ تينوش\n تـۉ به آنت ښاچی",
   },
   msgSentFailure: {
     en: "Appologies \n Your message was not sent. Please try again.",
     prs: "متاسف استیم \nپیام شما ارسال نشد. لطفاً دوباره کوشش کنید.",
     ps: "بخښنه غواړو\n، ستاسو پیغام ندی لیږل شوی. مهرباني وکړئ بیا هڅه وکړئ.",
-    nr: "",
+    nr: "تـۉ به اݩت نه گـو. تشو گیري ښاچ",
   },
   nameValidation: {
     en: "Your name should be between 3 and 25 letters.",
     prs: "نام تان بین ۳ الی ۲۵ حرف باشد.",
-    ps: "ستاسو نوم باید د 3 او 25 حروفو ترمنځ وي.",
-    nr: "",
+    ps: "ستاسو نوم باید د 3 او 25 ټکو ترمنځ وي.",
+    nr: " تـۉ به نام ۳ به ۲۵ باښ اېشت تیبـۉ ",
   },
   emailValidation: {
     en: "Please make sure your email address is correct.",
     prs: "لطفاً از درست بودن ادرس ایمیل تان اطمینان حاصل کنید.",
     ps: "مهرباني وکړئ ډاډ ترلاسه کړئ چې ستاسو بریښنالیک آدرس سم دی.",
-    nr: "",
+    nr: "تـۉ به ایمیل ادرس تیری تیبـۉ",
   },
   messageValidation: {
     en: "Your message must be at least 100 characters.",
     prs: "پیام تان باید حد اقل ۱۰۰ کارکتر(حرف) باشد.",
-    ps: "ستاسو پیغام باید لږترلږه 100 حروف وي.",
-    nr: "",
+    ps: "ستاسو پیغام باید لږترلږه 100 ټکی وي.",
+    nr: "تـۉ به اݩت، ۱۰۰ باښ که اپیلوک نه تیبـۉ",
   },
   missionStatement: {
     en: "This page provides detailed information about the history and culture of the people of Nuristan from the past to the present.",
-    prs: "هدف این صفحه أرایه معلومات دقیق از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد.",
-    ps: "د دې پاڼې موخه د نورستان د خلکو او د تاریخ او کلتور په اړه د پخوا څخه تر اوسني وخت پورې د مفصل معلوماتو وړاندې کول دي.",
-    nr: "",
+    prs: "هدف این صفحه أرایه معلومات از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد.",
+    ps: "د دې پاڼې موخه د نورستان د خلکو او د تاریخ او کلتور په اړه د پخوا څخه تر اوسني وخت پورې د معلوماتو وړاندې کول دي.",
+    nr: "اي مؤک که یمه، نؤشت به اۊنؤ اېشت، نورستان تاریخ –ی چاک پک به مېله چیترېمیش ",
   },
   msg404: {
     en: "We are sorry, we did not find the page you were looking for. Please try again.",
     prs: "معذوریم, صفحه مورد نظر تان را نیافتیم. لطفاً دوباره کوشش نماید.",
     ps: "بخښنه غواړو, موږ هغه پاڼه ونه موندله چې تاسو یې په لټه کې یاست. مهرباني وکړئ بیا هڅه وکړئ.",
-    nr: "",
+    nr: "یمه تـۉ چېري اوړي مؤک نه لتو؛ تشو ای پار گیري یمه ښه ښاچ",
   },
 }
 

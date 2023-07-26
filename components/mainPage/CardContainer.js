@@ -67,7 +67,7 @@ function CardContainer() {
   ]
 
   return (
-    <div className=" min-w-full bg-[#306090] bg-solid rounded-xl pt-10 my-10 flex flex-col justify-center items-center  md:relative">
+    <div dir={dir} className=" min-w-full bg-[#306090] bg-solid rounded-xl pt-10 my-10 flex flex-col justify-center items-center  md:relative">
       <div className=" items-center justify-center p-8 m-auto">
         <p className=" text-2xl text-[#f0f0f0] mx-auto text-center mb-10"> {missionStatement[lan]} </p>
       </div>
