@@ -20,7 +20,9 @@ function ListArticles({ listOfArticles, error }) {
   useEffect(() => {
     setDir(lan === "en" ? "ltr" : "rtl")
   }, [lan])
-
+  useEffect(()=>{
+    
+  })
   const handleClick = (e, el) => {
     e.preventDefault()
     dispatch({ type: "LOADINGPAGE", payload: true })

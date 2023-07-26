@@ -16,8 +16,8 @@ function MainpageHero() {
     return (
         <div className={mainHero}>
             <div className='flex flex-col justify-center items-right sm:items-center px-8 sm:p-4'>
-                <h1 dir={dir} className="text-5xl  text-right sm:text-center mt-6 w-full">{mainH1[lan]} </h1>
-                <h2 dir={dir} className=" text-2xl text-right sm:text-center  "> {statementTitle[lan]}</h2>
+                <h1 dir={dir} className={`text-5xl  ${dir === "ltr"? "text-left": "text-right"} sm:text-center mt-6 w-full`}>{mainH1[lan]} </h1>
+                <h2 dir={dir} className={`text-2xl ${dir === "ltr" ? "text-left" : "text-right"}t sm:text-center `}> {statementTitle[lan]}</h2>
             </div>
             <div className="flex justify-center items-center my-10"  >
                 <div className=" w-[300px] h-[430px] relative border-2 rounded"> 
