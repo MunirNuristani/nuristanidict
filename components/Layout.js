@@ -9,7 +9,7 @@ import LanguageModal from './Modal/LanguageModal'
 
 function Layout({ children }) {
   return (
-    <div>
+    <div >
       <Header />
       <div className={styles.backGroundContainer}>
         <div className={styles.mainContainer}>

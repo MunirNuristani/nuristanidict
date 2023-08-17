@@ -1,39 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --main-bg-color: #F2F2F2;
 }
-body *, body::after, body::before {
+
+body *,
+body::after,
+body::before {
   box-sizing: border-box;
 }
+
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lateef', 'Poppins',cursive;
+  font-family: 'Lateef', 'Poppins', cursive;
   position: relative;
   min-height: 100vh;
-  
 }
 
-p{
+p {
   text-align: justify;
   margin: 0, 2rem;
 }
 
-h2{
+h2 {
   text-align: justify;
   margin: 0.5rem 0;
   font-size: 2rem
 }
-h3{
+
+h3 {
   text-align: justify;
   margin: 0.5rem 0;
   font-size: 1.25rem
 }
 
- 
+.mega-menu {
+  display: none;
+  left: 0;
+  top: 80px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+.hoverable {
+  position: static;
+  display: flex;
+}
+
+.hoverable:hover .mega-menu {
+  display: flex;
+}
+
+
+
+.rhap_container {
+  width: auto !important;
+  padding: 0 !important;
+  background-color: inherit !important;
+  box-shadow: none !important;
+}
