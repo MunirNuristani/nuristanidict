@@ -1,23 +1,20 @@
-import React from 'react'
-import MainpageHero from './MainpageHero'
-import { mainDivCSS } from '../CSS/TailwindCSS'
-import CardContainer from './CardContainer'
-
+import React,{useState, useEffect} from "react";
+import MainpageHero from "./Hero";
+import CardContainer from "./CardContainer";
 export default function MainLandingPage() {
+  const [dir, setDir] = useState("")
+  const lan = (typeof window !== "undefined" && localStorage.getItem('lan'))
 
-
+  useEffect(() => {
+    setDir(lan === "en" ? "ltr" : "rtl")
+  }, [lan])
 
   return (
-      <div dir='rtl' className={mainDivCSS} >
-        <div className="flex flex-col h-full w-full p-0 m-0 mx-10 sm:mx-4">
-          <MainpageHero />
-          <CardContainer />
-        </div>
-      </div>
-
-  )
+    <div dir={dir} className="h-full">
+      {/* Hero Section */}
+      <MainpageHero />
+      {/* Cards Container*/}
+      <CardContainer/>
+    </div>
+  );
 }
-
-
-
-
