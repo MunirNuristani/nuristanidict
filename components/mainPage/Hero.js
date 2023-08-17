@@ -4,7 +4,7 @@ import Image from "next/image";
 import img from "../../public/assets/heroImage01.png";
 import logo from "../../public/logo_original_noLabel.png";
 import { phrases } from "../../utils/i18n";
-import background from "../../public/backgroundPic.jpeg";
+import background from "../../public/backgroundPic.png";
 function MainpageHero() {
   const { mainH1, statementTitle } = phrases;
   const [dir, setDir] = useState("");

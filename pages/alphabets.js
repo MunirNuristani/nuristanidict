@@ -6,7 +6,7 @@ import LoadingPage from "../components/LoadingPage";
 import { phrases } from "../utils/i18n";
 import Image from "next/image";
 import rotateImage from "../public/assets/rotatePhone.svg";
-import AudioPlay from "../components/audioPlay";
+import AudioPlay from "../components/AudioPlay";
 
 export default function Alphabets({ kalasha, error }) {
   const [dir, setDir] = useState("");
