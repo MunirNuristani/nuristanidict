@@ -68,3 +68,11 @@ h3 {
   background-color: inherit !important;
   box-shadow: none !important;
 }
+
+.gradiant {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.cardGradiant {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}

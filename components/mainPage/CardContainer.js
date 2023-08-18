@@ -17,7 +17,7 @@ function CardContainer() {
     articleInfo,
     dictionary,
     dicInfo,
-    missionStatement,
+    statementTitle,
     alphabet,
     alphabetInfo,
     landscapeImages,
@@ -25,6 +25,7 @@ function CardContainer() {
     historicalImages,
     historicalImagesInfo,
   } = phrases;
+
   const [change, setChange] = useState({
     alphabet: false,
     book: false,
@@ -89,8 +90,8 @@ function CardContainer() {
       title: historicalImages[lan],
       text: historicalImagesInfo[lan],
       icon: <GiIonicColumn size={50} className="" />,
-      type: "dic",
-      route: "/dictionary/dictionary",
+      type: "histImage",
+      route: "/historicalImages",
     },
   ];
 
@@ -99,26 +100,39 @@ function CardContainer() {
       dir={dir}
       className={` ${
         lan === "en" ? "font-['Poppins']" : ""
-      } px-7 lg:px-10  xl:px-14`}
+      } px-7 lg:px-10  xl:px-14 w-4/6 m-auto flex flex-col justify-center items-center`}
     >
       <hr />
       <div className="pt-4">
         <div className="m-x-auto text-center px-4">
-          <h2 className={`font-semibold ${lan==="en"? "text-2xl" : "text-3xl"}  m-x-auto text-center mb-5`}>
-            {missionStatement[lan]}
+          <h2
+            className={`font-semibold ${
+              lan === "en" ? "text-2xl" : "text-3xl"
+            }  m-x-auto text-center mb-5`}
+          >
+            {statementTitle[lan]}
           </h2>
         </div>
       </div>
       <div className="m-x-auto max-w-2/3 sm:max-w-full sm:px-0 px-8 my-10 md:my-5 ">
-        <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 gap-y-[0] ">
+        <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-2 gap-y-[0] ">
           {cardInfo.map((card, index) => (
             <div
               key={index}
-              className=" flex flex-col justify-start items-center rounded-xl m-4 sm:m-2 px-6 pb-8 pt-4 hover:shadow-lg cursor-pointer border-2 "
+              className=" flex flex-col justify-start items-center rounded-xl m-4 sm:m-2 px-6 pb-8 pt-4 hover:shadow-lg cursor-pointer border-2 min-h-[250px] cardGradiant drop-shadow-lg"
+              onClick={() => handleRouting(card?.route)}
             >
               <span>{card.icon}</span>
-              <h4 className={` ${lan==="en"? "text-xl" : "text-2xl"}  font-bold my-2`}>{card.title}</h4>
-              <p className={` ${lan==="en"? "text-lg" : "text-xl"}`}>{card.text}</p>
+              <h4
+                className={` ${
+                  lan === "en" ? "text-xl" : "text-2xl"
+                }  font-bold my-2`}
+              >
+                {card.title}
+              </h4>
+              <p className={` ${lan === "en" ? "text-lg" : "text-xl"}`}>
+                {card.text}
+              </p>
             </div>
           ))}
         </div>
