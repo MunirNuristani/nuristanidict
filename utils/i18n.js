@@ -160,10 +160,10 @@ export const phrases = {
     nr: "اݩت",
   },
   contactMsgSalutation: {
-    en: "Dear lovers of Nuristani Language!",
-    prs: "هموطن و همزبان گرانقدر!",
-    ps: "گران هیوادوال او د نورستاني ژبی مینه وال!",
-    nr: " بوسته گولیݩ-ی،نورستاني الا به بوسته پړک اودېݩ",
+    en: "Dear lovers of Nuristani Language and culture!",
+    prs: "دوستداران گرامی زبان و فرهنگ نورستانی!",
+    ps: "د نورستاني ژبې او فرهنګ مینه والو!",
+    nr: " نورستاني الا به چاک پاک به بوسته پړک اودېݩ!",
   },
   contactMsgDetails: {
     en: "The contact page allows you to get connect with us. If you have a question or a constructive suggestion, or if the word you are looking for does not exist and is included, you can send us your message through this channel by entering your full name and email address, which is mandatory. Also, if you want a new section to be created in the linguistic or professional sections if you are ready to cooperate in that new section or introduce someone who has knowledge and interest in cooperation in that field. Please make sure that your name and surname are correct, especially your email address.",
