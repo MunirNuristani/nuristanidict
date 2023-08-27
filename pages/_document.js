@@ -10,11 +10,11 @@ export default function MyDocument() {
         <link rel="apple-touch-icon" href="/logo-favicon.png"></link>
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <meta name="application-name" content="PWA App" />
+        <meta name="application-name" content="Nuristani.info" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="PWA App" />
-        <meta name="description" content="Best PWA App in the world" />
+        <meta name="apple-mobile-web-app-title" content="Nuristani.info" />
+        <meta name="description" content="Best Nuristani.info in the world" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
@@ -28,18 +28,18 @@ export default function MyDocument() {
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="https://nuristani.info" />
-        <meta name="twitter:title" content="PWA App" />
-        <meta name="twitter:description" content="Best PWA App in the world" />
+        <meta name="twitter:title" content="Nuristani.info" />
+        <meta name="twitter:description" content="Information about Nuristan" />
         <meta name="twitter:image" content="https://nuristani.info/assets/icon-192x192.png" />
         <meta name="twitter:creator" content="@munirnuristani" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="PWA App" />
+        <meta property="og:title" content="Nuristani.info" />
         <meta property="og:description" content="Nuristani.info" />
         <meta property="og:site_name" content="Nuristani" />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='PWA App' />
-        <meta property='og:description' content='Best PWA App in the world' />
-        <meta property='og:site_name' content='PWA App' />
+        <meta property='og:title' content='Nuristani.info' />
+        <meta property='og:description' content='Information about Nuristan' />
+        <meta property='og:site_name' content='Nuristani.info' />
         <meta property='og:url' content='https://nuristani.info' />
         <meta property='og:image' content='https://nuristani.info/icons/apple-touch-icon.png' />
         {/* <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />  */}

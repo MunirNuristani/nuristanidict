@@ -104,7 +104,7 @@ function CardContainer() {
     >
       <hr />
       <div className="pt-4">
-        <div className="m-x-auto text-center px-4">
+        {/* <div className="m-x-auto text-center px-4">
           <h2
             className={`font-semibold ${
               lan === "en" ? "text-2xl" : "text-3xl"
@@ -112,7 +112,7 @@ function CardContainer() {
           >
             {statementTitle[lan]}
           </h2>
-        </div>
+        </div> */}
       </div>
       <div className="m-x-auto max-w-2/3 sm:max-w-full sm:px-0 px-8 my-10 md:my-5 ">
         <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-2 gap-y-[0] ">

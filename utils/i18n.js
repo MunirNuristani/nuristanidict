@@ -15,9 +15,9 @@ export const phrases = {
 
   dictionary: {
     en: "Nuristani Dictionaries",
-    prs: "قاموس ها زبان نورستانی",
+    prs: "قاموس های زبان نورستانی",
     ps: "د نورستاني ژبې قاموسونه",
-    nr: " دری الا- کلښه الا به باښ به کتاب",
+    nr: " تری قاموس",
   },
 
   articles: {
@@ -57,16 +57,16 @@ export const phrases = {
 
   statementTitle: {
     en: "Our objective is to gather and present information about Nuristan's history, language, and culture.",
-    prs: "هدف ما جمع آوری و ارائه اطلاعات در مورد تاریخ، زبان و فرهنگ نورستان است.",
-    ps: "زموږ موخه د نورستان د تاریخ، ژبې او کلتور په اړه د معلوماتو راټولول او وړاندې کول دي.",
-    nr: "یومه بېتات کښۉݩ، نورستان به تاریخی، الای ،چاک پک به پؤرېݩ مېله مترۉݩ کتي وڙ. ",
+    prs: "هدف ما ارائه معلومات در مورد تاریخ، زبان و فرهنگ نورستان است.",
+    ps: "زموږ موخه د نورستان د تاریخ، ژبې او فرهنګ په اړه د معلوماتو وړاندې کول دي.",
+    nr: "یومه بېتات کښۉݩ، نورستان به تاریخ-ی، الای ،چاک پک به پؤرېݩ مېله مترۉݩ کتي وڙ. ",
   },
 
   alphabetInfo: {
     en: "On this website, you can find the Alphabet of the Kalasha Ala Nuristani language along with its phonics and usage.",
-    prs: "در این وب سایت می توانید الفبای زبان کلښه نورستانی را همراه با فونیم و کاربرد آن بیابید.",
-    ps: "په دې ویب پاڼه کې تاسو کولی شئ د نورستاني کلښه ژبې الفبا او د هغې د فونیمو او کارونې په اړه معلومات ترلاسه کړئ.",
-    nr: "",
+    prs: "در این ویب سایت می توانید الفبای زبان کلښه نورستانی را همراه با فونیم و کاربرد آن بیابید.",
+    ps: "په دې ویب پاڼه کې تاسو کولی شئ د نورستاني کلښه ژبې الفبا او د هغې د فونیمو کارونې په اړه معلومات ترلاسه کړئ.",
+    nr: " یووي ویب سایت که نورستانی کلښه الا به الفبا فونیم میلی تېیشته اوت.",
   },
   booksInfo: {
     en: "We have made an effort to gather various books about Nuristan published in Afghanistan and other countries in different languages so that those interested can get the information they need from this website.",
@@ -78,26 +78,26 @@ export const phrases = {
   articleInfo: {
     en: "On this website, you can find some articles written about the history and culture of Nuristan or old Kafiristan by experts and scientists who are informed on Nuristan issues.",
     prs: "در این ویب سایت آن عده مقالات را یافته می توانید که در مورد تاریخ و فرهنگ نورستان یا کافرستان قدیم از سوی دانشمندان آگاه نگاشته شده است.",
-    ps: "په دې وېب پاڼه کې د نورستان د تاریخ او کلتور په اړه هغه مقالې موندلی شئ چې د نورستان پوهانو لخوا لیکل شوي دي.",
+    ps: "په دې وېب پاڼه کې د نورستان د تاریخ او فرهنګ په اړه هغه مقالې موندلی شئ چې پوهانو لخوا لیکل شوي دي.",
     nr: " یووي ویب سایت که تی مقاله تیي شته اوت ته، تې نورستانه زڙݩله مجبيݩ چیترېشته اوت",
   },
   dicInfo: {
-    en: "On this website, three dictionaries, one named Nuristan Language Dictionary(Kalasha Ala), its translation in Pashto and Dari languages, Nuristan Dari Dictionary(Kalasha Ala), and Nuristan Culture(Kata language) have been made available to the readers.",
-    prs: "در این ویب سایت سه دکشنری, یکی به نام فرهنگ زبان نورستاني (کلښه الا) ترجمه آن با زبان های پشتو و دری, دوم - قاموس دری نورستانی (کلښه الا) و سوم   فرهنگ نورستانی(کته ویری) به دسترس خواننده گان قرار داده شده است",
+    en: "On this website, three dictionaries, one named Nuristan Language Dictionary(Kalasha Ala), its translation in Pashto and Dari languages, Nuristan Dari Dictionary(Kalasha Ala), and Nuristan (Kata language) Dictionary have been made available to the readers.",
+    prs: "در این ویب سایت سه دکشنری, یکی به نام فرهنگ زبان نورستاني (کلښه الا) ترجمه آن با زبان های پشتو و دری. دوم - قاموس دری نورستانی (کلښه الا) و سوم   فرهنگ نورستانی(کته ویری) به دسترس خواننده گان قرار داده شده است",
     ps: "په دې وېب پاڼه کې درې قاموسونه چې يو يې د نورستاني ژبې (کلښه الا)  قاموس چی په پښتو او دري ژبو ژباړه ده، دوهم یې  دري – نورستانی کلښه الا قاموس،  او دریم یې په کته ویری ژبه نورستانی فرهنگ لوستونکو ته وړاندې شوي دي.",
-    nr: " یووی سایت که تری اۊله باښ به کتاب؛ اېک نورستانی کلښه الا به فرهنگ ته سی دری-ی  پشتو الا میلي ارۉړوي شته وڙ،سېک گي دری- کلښه الا به اۊله باښ به کتاب وڙ،ترېۉم گي کاݩته الا به اۊله باښ به کتاب وڙ؛ تيي شته وڙت ",
+    nr: " یووی سایت که تری قاموس؛ اېک نورستانی کلښه الا به فرهنگ ته سی دری-ی  پشتو الا میلي ارۉړوي شته وڙ،سېک گي دری- کلښه الا به قاموس وڙ،ترېۉم گي کاݩته الا به اۊله باښ به کتاب وڙ؛ تيي شته وڙت .",
   },
   landscapeImagesInfo: {
     en: "On this site, photos of Nuristan's beautiful landscapes and the people are available.",
-    prs: "در این سایت عکس های مناظر زیبای نورستان و مردم نورستان جا داده  شده است.",
+    prs: "در این سایت عکس های مناظر زیبای نورستان و مردم آن جا داده  شده است.",
     ps: "په دې وېب پاڼه کې د نورستان د ښکليو منظرو او د نورستان د خلکو انځورونه اېښودل شوي دي.",
-    nr: " یووي سایت که نورستان به مجبیݩ به –ی داگول به بوسته بوسته چوېر تيي شته اوت",
+    nr: " یووي سایت که نورستان به مجبیݩ به –ی داگول به بوسته بوسته چوېر تيي شته اوت.",
   },
   historicalImagesInfo: {
-    en: "On this website, we have a large collection of historical images of Nuristan.",
-    prs: "در این وب سایت مجموعه بزرگی از تصاویر تاریخی و فرهنگی نورستان را داریم.",
+    en: "On this website, we have a large collection of historical and cultural images of Nuristan.",
+    prs: "در این ویب سایت مجموعه بزرگی از تصاویر تاریخی و فرهنگی نورستان را داریم.",
     ps: "په دې ویب پاڼه کې موږ د نورستان د تاریخي او فرهنګی انځورونو یوه لویه ټولګه لرو.",
-    nr: "",
+    nr: "یووي سایت که نورستان به تاریخ به چاک پاک به اۊچؤ چوېر تيي شته اوت .",
   },
   articleTitle: {
     en: "Title of the Article",
@@ -160,10 +160,10 @@ export const phrases = {
     nr: "اݩت",
   },
   contactMsgSalutation: {
-    en: "Dear lovers of Nuristani Language!",
-    prs: "هموطن و همزبان گرانقدر!",
-    ps: "گران هیوادوال او د نورستاني ژبی مینه وال!",
-    nr: " بوسته گولیݩ-ی،نورستاني الا به بوسته پړک اودېݩ",
+    en: "Dear lovers of Nuristani Language and culture!",
+    prs: "دوستداران گرامی زبان و فرهنگ نورستانی!",
+    ps: "د نورستاني ژبې او فرهنګ مینه والو!",
+    nr: " نورستاني الا به چاک پاک به بوسته پړک اودېݩ!",
   },
   contactMsgDetails: {
     en: "The contact page allows you to get connect with us. If you have a question or a constructive suggestion, or if the word you are looking for does not exist and is included, you can send us your message through this channel by entering your full name and email address, which is mandatory. Also, if you want a new section to be created in the linguistic or professional sections if you are ready to cooperate in that new section or introduce someone who has knowledge and interest in cooperation in that field. Please make sure that your name and surname are correct, especially your email address.",
@@ -289,7 +289,7 @@ export const phrases = {
   missionStatement: {
     en: "This page provides detailed information about the history and culture of the people of Nuristan from the past to the present.",
     prs: "هدف این صفحه أرایه معلومات از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد.",
-    ps: "د دې پاڼې موخه د نورستان د خلکو او د تاریخ او کلتور په اړه د پخوا څخه تر اوسني وخت پورې د معلوماتو وړاندې کول دي.",
+    ps: "د دې پاڼې موخه د نورستان د خلکو او د تاریخ او فرهنګ په اړه د پخوا څخه تر اوسني وخت پورې د معلوماتو وړاندې کول دي.",
     nr: "اي مؤک که یمه، نؤشت به اۊنؤ اېشت، نورستان تاریخ –ی چاک پک به مېله چیترېمیش ",
   },
   msg404: {
@@ -331,7 +331,7 @@ export const phrases = {
   menuItemArticles: {
     en: " Here you can find some articles written about the history and culture of Nuristan or old Kafiristan.",
     prs: "در این جا آن عده مقالات را یافته می توانید که در مورد تاریخ و فرهنگ نورستان یا کافرستان قدیم نگاشته شده است.",
-    ps: "دلته د نورستان د تاریخ او کلتور په اړه هغه مقالې موندلی شئ چې د نورستان د مسلو په اړه  پوهانو لخوا لیکل شوي دي.",
+    ps: "دلته د نورستان د تاریخ او فرهنګ په اړه هغه مقالې موندلی شئ چې د نورستان د مسلو په اړه  پوهانو لخوا لیکل شوي دي.",
     nr: " اتي که مقاله تیي شته اوت ته، تې نورستانه زڙݩله مجبيݩ چیترېشته اوت",
   },
   menuItemLandScape: {
@@ -341,10 +341,10 @@ export const phrases = {
     nr: " نورستان به مجبیݩ به –ی داگول به بوسته بوسته چوېر .",
   },
   menuItemHistorical: {
-    en: "Historical Photos of Nuristan and its people.",
-    prs: "عکس های تاریخی نورستان.",
-    ps: "د نورستان تاریخی انځورونه.",
-    nr: "",
+    en: "Historical and cultural photos of Nuristan .",
+    prs: "عکس های تاریخی و فرهنگی نورستان.",
+    ps: "د نورستان تاریخی او فرهنګی انځورونه.",
+    nr: "نورستان به تاریخ به چاک پاک به چوېر",
   },
   language: {
     en: "language",

@@ -20,7 +20,7 @@ function MainpageHero() {
         lan === "en" ? "font-['Poppins']" : ""
       } relative w-[98vw] h-[80vh] flex justify-center items-center my-4 sm:my-1 rounded-xl sm:min-h-[115vh] sm:mb-10`}
     >
-        <div
+      <div
         className={`absolute w-4/6 h-5/6  rounded-xl  sm:my-1 gradiant sm:bg-inherit flex justify-around items-center sm:flex-col drop-shadow-2xl`}
       >
         <div className="flex flex-col justify-center items-center px-8 sm:p-4 ">
@@ -47,12 +47,13 @@ function MainpageHero() {
           >
             {mainH1[lan]}{" "}
           </h1>
-          {/* <h2 dir={dir} className={`
-            ${lan === "en" ? "text-2xl md:text-lg" :
-              "text-3xl md:text-xl"} text-center `}>
-            {" "}
+          <h2
+            className={`font-semibold ${
+              lan === "en" ? "text-2xl" : "text-3xl"
+            }  m-x-auto text-center mb-5`}
+          >
             {statementTitle[lan]}
-          </h2> */}
+          </h2>
         </div>
 
         <div className="flex justify-center items-center my-10 mx-4 ">
