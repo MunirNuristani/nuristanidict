@@ -52,14 +52,14 @@ export const phrases = {
     en: "Mirza Taza Gul Khan Cultural Foundation",
     prs: "نهاد فرهنگی میرزا تازه گل خان",
     ps: "د میرزا تازه گل خان فرهنگي ټولنه",
-    nr: " میرزا تازه گل خان به چاک پک مېله اما",
+    nr: " میرزا تازه گل خان به چاک پاک مېله اما",
   },
 
   statementTitle: {
     en: "Our objective is to gather and present information about Nuristan's history, language, and culture.",
     prs: "هدف ما ارائه معلومات در مورد تاریخ، زبان و فرهنگ نورستان است.",
-    ps: "زموږ موخه د نورستان د تاریخ، ژبې او فرهنګ په اړه د معلوماتو وړاندې کول دي.",
-    nr: "یومه بېتات کښۉݩ، نورستان به تاریخ-ی، الای ،چاک پک به پؤرېݩ مېله مترۉݩ کتي وڙ. ",
+    ps: "زموږ موخه د نورستان د تاریخ، ژبې او فرهنګ په اړه د معلوماتو وړاندې کول ده.",
+    nr: "یومه بېتات کښۉݩ، نورستان به تاریخ-ی، الا-ی ،چاک پاک به پؤرېݩ مېله مترۉݩ کتي وڙ. ",
   },
 
   alphabetInfo: {
@@ -133,7 +133,7 @@ export const phrases = {
     en: "Historical and Cultural Images ",
     prs: "تصاویر تاریخی و فرهنگی نورستان",
     ps: "د نورستان تاریخي او فرهنګي انځورونه",
-    nr: " نورستان به چاک پک به چوېر",
+    nr: " نورستان به چاک پاک به چوېر",
   },
   contactUs: {
     en: "Contact Us",
@@ -290,7 +290,7 @@ export const phrases = {
     en: "This page provides detailed information about the history and culture of the people of Nuristan from the past to the present.",
     prs: "هدف این صفحه أرایه معلومات از تاریخ و فرهنگ مردم و سرزمین نورستان از گذشته تا امروز می باشد.",
     ps: "د دې پاڼې موخه د نورستان د خلکو او د تاریخ او فرهنګ په اړه د پخوا څخه تر اوسني وخت پورې د معلوماتو وړاندې کول دي.",
-    nr: "اي مؤک که یمه، نؤشت به اۊنؤ اېشت، نورستان تاریخ –ی چاک پک به مېله چیترېمیش ",
+    nr: "اي مؤک که یمه، نؤشت به اۊنؤ اېشت، نورستان تاریخ –ی چاک پاک به مېله چیترېمیش ",
   },
   msg404: {
     en: "We are sorry, we did not find the page you were looking for. Please try again.",
