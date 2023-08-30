@@ -21,10 +21,10 @@ function MainpageHero() {
       } relative w-[98vw] h-[80vh] flex justify-center items-center my-4 sm:my-1 rounded-xl sm:min-h-[115vh] sm:mb-10`}
     >
       <div
-        className={`absolute w-4/6 h-5/6  rounded-xl  sm:my-1 gradiant sm:bg-inherit flex justify-around items-center sm:flex-col drop-shadow-2xl`}
+        className={`absolute w-4/6 min-h-5/6 sm:w-full sm:h-full  rounded-xl  sm:my-4 gradiant sm:bg-inherit flex justify-around items-center sm:flex-col md:flex-col drop-shadow-2xl`}
       >
         <div className="flex flex-col justify-center items-center px-8 sm:p-4 ">
-          <div className=" xl:w-[150px] xl:h-[172px] lg:w-[150px] lg:h-[1720px] md:w-[100px] md:h-[115px] sm:w-[150px] sm:h-[172px] relative  rounded">
+          <div className=" xl:w-[150px] xl:h-[172px] lg:w-[150px] lg:h-[172px] md:w-[150px] md:h-[172px] sm:w-[150px] sm:h-[172px] md:mt-5 relative  sm:mt-1 rounded">
             <Image
               src={logo}
               alt="MTGKCF logo"
@@ -43,21 +43,21 @@ function MainpageHero() {
                   ? "text-4xl md:text-2xl sm:text-3xl"
                   : "text-5xl md:text-3xl sm:text-4xl"
               }
-              text-center sm:text-center color-black-500 mt-6 w-full`}
+              text-center sm:text-center color-black-500 md:mt-2 mt-6 w-full`}
           >
             {mainH1[lan]}{" "}
           </h1>
           <h2
             className={`font-semibold ${
               lan === "en" ? "text-2xl" : "text-3xl"
-            }  m-x-auto text-center mb-5`}
+            }  m-x-auto text-center sm:mb-1 mb-5`}
           >
             {statementTitle[lan]}
           </h2>
         </div>
 
-        <div className="flex justify-center items-center my-10 mx-4 ">
-          <div className=" lg:w-[300px] lg:h-[430px]  xl:w-[300px] xl:h-[430px] md:w-[180px] h-[260px] sm:w-[300px] sm:h-[430px] relative opacity-1 rounded">
+        <div className="flex justify-center items-center md:my-2 sm:my-3 my-10 mx-4 ">
+          <div className=" lg:w-[300px] lg:h-[430px]  xl:w-[300px] xl:h-[430px] md:w-[300px] h-[430px] sm:w-[300px] sm:h-[430px] relative opacity-1 rounded">
             <Image
               src={img}
               alt="Nuristani Carving"

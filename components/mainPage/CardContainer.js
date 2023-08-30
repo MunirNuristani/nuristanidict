@@ -100,7 +100,7 @@ function CardContainer() {
       dir={dir}
       className={` ${
         lan === "en" ? "font-['Poppins']" : ""
-      } px-7 lg:px-10  xl:px-14 w-4/6 m-auto flex flex-col justify-center items-center`}
+      } sm:px-1 lg:px-7 md:px-1 lg:px-10  xl:px-14 w-4/6 sm:w-full m-auto flex flex-col justify-center items-center`}
     >
       <hr />
       <div className="pt-4">
@@ -115,7 +115,7 @@ function CardContainer() {
         </div> */}
       </div>
       <div className="m-x-auto max-w-2/3 sm:max-w-full sm:px-0 px-8 my-10 md:my-5 ">
-        <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-2 gap-y-[0] ">
+        <div className="grid grid-cols-2 md:grid-cols-1  sm:gap-[0] gap-2 gap-y-[0] ">
           {cardInfo.map((card, index) => (
             <div
               key={index}
