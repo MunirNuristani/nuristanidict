@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { articles, minifyRecords } from "../utils/airTable";
 import { useRouter } from "next/router";
@@ -32,8 +33,8 @@ function ListArticles({ listOfArticles, error }) {
 
   useEffect(() => {
     setDir(lan === "en" ? "ltr" : "rtl");
-    console.log("list of articles:", listOfArticles);
   }, [lan]);
+  
   useEffect(() => {});
   const handleClick = (e, el) => {
     e.preventDefault();
@@ -45,7 +46,6 @@ function ListArticles({ listOfArticles, error }) {
   };
 
   const getLanguage = (writeLang, lang) => {
-    console.log("run:", writeLang, lang)
     switch (writeLang) {
       case "en":
         return english[lang];

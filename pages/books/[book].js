@@ -6,6 +6,7 @@ const Books = () => {
   const router = useRouter();
   const id = router.query.book
   const [bookURL, setBookURL] = useState('')
+  
 
   useEffect(() => {
     id && books.find(id, function (err, record) {
