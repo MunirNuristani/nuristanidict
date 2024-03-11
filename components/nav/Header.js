@@ -18,7 +18,6 @@ function Header() {
   const { homePage, pictures, contact, mainH1, statementTitle, litrature } =
     phrases;
   const router = useRouter();
-
   const lan = typeof window !== "undefined" && localStorage.getItem("lan");
 
   useEffect(() => {
@@ -29,6 +28,7 @@ function Header() {
   const aCSS = `py-6 md:p-0 px-2 lg:p-6 ${
     lan === "en" ? "text-xl" : "text-2xl"
   } md:text-xl font-bold  cursor-pointer`;
+
   const liCSS =
     " flex justify-center items-center hover:bg-[#306090] hover:text-white md:min-w-[70px] min-w-[100px] h-1/2 rounded align-center m-auto";
 
@@ -60,16 +60,18 @@ function Header() {
         <div className="container mx-auto flex justify-between">
           <div
             dir={dir}
-            className="relative flex block p-4 lg:p-6 text-xl  font-bold"
+            className="relative flex p-4 lg:p-6 text-xl  font-bold"
           >
             <Link href="/" passHref>
-              <Image
-                src={logo}
-                alt="logo"
-                width={90}
-                height={100}
-                className="absolute right-2 top-2 "
-              />
+              <div>
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={90}
+                  height={100}
+                  className="absolute right-2 top-2 "
+                />
+              </div>
             </Link>
             <div className="flex flex-col justify-center items-center">
               <h1
@@ -101,7 +103,7 @@ function Header() {
                   id="mega-menu"
                   className="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-[#306090] mt-6 md:top-[80px]"
                 >
-                  <div className="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                  <div className="container mx-auto w-full flex flex-wrap justify-between">
                     <div className="w-full text-white mb-8">
                       <h2
                         className={`font-bold ${

@@ -8,7 +8,7 @@ import Image from "next/image";
 import rotateImage from "../public/assets/rotatePhone.svg";
 import AudioPlay from "../components/AudioPlay";
 
-export default function Alphabets({ kalasha, error }) {
+export default function Alphabets({ alphabets, error }) {
   const [dir, setDir] = useState("");
   const {
     alphabetHeading,
@@ -30,7 +30,7 @@ export default function Alphabets({ kalasha, error }) {
 
   useEffect(() => {
     dispatch({ type: "LOADINGPAGE", payload: false });
-  }, [kalasha, dispatch]);
+  }, [alphabets, dispatch]);
 
   return (
     <>
@@ -69,16 +69,16 @@ export default function Alphabets({ kalasha, error }) {
               </tr>
             </thead>
             <tbody>
-              {kalasha.map((el) => (
+              {alphabets.map((el) => (
                 <tr key={el.id}>
                   <td className={cells}> {el.fields.Letter}</td>
                   <td className={cells}> {el.fields.Latin}</td>
                   <td className={cells}> {el.fields.Name}</td>
                   <td className={cells}> {el.fields.Description} </td>
                   <td className={cells}>
-                    {el.fields.recording1 && <AudioPlay src={el.fields.recording1[0].url} />
-                      
-                    }
+                    {el.fields.recording1 && (
+                      <AudioPlay src={el.fields.recording1[0].url} />
+                    )}
                   </td>
                 </tr>
               ))}
@@ -97,7 +97,7 @@ export async function getServerSideProps(context) {
       .all();
     return {
       props: {
-        kalasha: minifyRecords(allLetters),
+        alphabets: minifyRecords(allLetters),
       },
     };
   } catch (error) {

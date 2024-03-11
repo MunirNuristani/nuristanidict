@@ -29,7 +29,7 @@ function MainpageHero() {
               src={logo}
               alt="MTGKCF logo"
               layout="fill"
-              fill
+              fill={true}
               objectFit="cover"
               objectPosition="center"
               loading="lazy"

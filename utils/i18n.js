@@ -117,6 +117,12 @@ export const phrases = {
     ps: "لیکوال",
     nr: "چیتروَله",
   },
+  translator: {
+    en: "Translator",
+    prs: "مترجم",
+    ps: "ژباړونکی",
+    nr: " ترجمه ایچَله",
+  },
   rotate: {
     en: "Please rotate your device to a horizontal position.",
     prs: "لطفا موبایل خود را به حالت افقی بچرخانید.",

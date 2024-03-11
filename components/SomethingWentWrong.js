@@ -5,7 +5,7 @@ import { buttonCSS } from './CSS/TailwindCSS'
 function SomethingWentWrong() {
   return (
     
-    <div dir='rtl' className="container mt-10  flex flex-col justify-center  items-center mx-auto backdrop-blur-sm bg-white/90 drop-shadow-xl px-16 py-5 rounded-xl w-[900px] text-x min-h-full ">
+    <div dir='rtl' className="container my-10  flex flex-col justify-center  items-center mx-auto bg-white/90 drop-shadow-xl px-16 py-5 rounded-xl w-[900px] text-x min-h-full ">
         <div className="m-5">
             <Image src={logo} width={200} height={200} alt="main Logo" />
         </div>
