@@ -54,7 +54,7 @@ function Page() {
               />
             </div>
             <p className="text-center">{downloadKeyboardText[lan]} :</p>
-            <div>
+            <div className="flex w-full justify-center items-center flex-col">
               <button
                 className={buttonCSS}
                 onClick={() =>
