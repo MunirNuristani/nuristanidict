@@ -6,6 +6,7 @@ import { messages } from "../utils/airTable"
 import AlertModal from "../components/Modal/AlertModal";
 import LoadingPage from "../components/LoadingPage";
 import { phrases } from "../utils/i18n";
+
 function Contacts() {
 
   const { contactUs, name, email, message, contactMsgSalutation, contactMsgDetails, contactMsgClosing, send, cancel, letterCount, msgSentSuccess, msgSentFailure, nameValidation, emailValidation, messageValidation } = phrases
@@ -67,7 +68,8 @@ function Contacts() {
             <br />
             {contactMsgDetails[lan]}
             <br />
-            <span dangerouslySetInnerHTML = {{__html: contactMsgClosing[lan]}} />
+            {/* for having an anchor tag inside span */}
+            <span dangerouslySetInnerHTML = {{__html: contactMsgClosing[lan]}} /> 
 
           </p>
           <form className="flex flex-col">

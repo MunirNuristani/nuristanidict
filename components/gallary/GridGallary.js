@@ -65,7 +65,7 @@ function GridGalleryCard({ imageUrl, show , images}) {
             >
                 <div className="relative w-[300px] h-[200px]">
                     <div className="absolute inset-0 hover:cursor-pointer z-10 flex transition duration-200 hover:bg-gray-300 ease-in hover:opacity-25 " onClick={(e) => showImageinModal(imageUrl, e)} />
-                    <Image src={imageUrl} alt="" layout="fill" objectFit="contain"  />
+                    <Image src={imageUrl} alt=""  objectFit="contain"  />
                 </div>
             </div>
             <PictureModal showPictureModal={showPictureModal} hidePictureModal={hidePictureModal} selectedImage={modalUrl} images={images} />

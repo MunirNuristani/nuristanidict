@@ -388,5 +388,29 @@ export const phrases = {
     ps: "نورستانی",
     nr: "نورستانی",
   },
+  keyboards: {
+    en: "Nuristani Kalasha Ala Keyboard",
+    prs: " کیبورد زبان نورستانی (کلښه الا)",
+    ps: "د نورستاني (کلښه الا) ژبې کیبورډ",
+    nr: "نورستانی کلښه الا به کیبورډ",
+  },
+  downloadKeyboardText: {
+    en: "You can download the Nuristani Kalasha Ala Keyboard for Microsoft Windows from the following link",
+    prs: "صفحه کلید (کیبورد) نورستانی نورستانی (کلښه الا) برای مایکروسافت ویندوز را می توانید از لینک زیر دانلود کنید ",
+    ps: "تاسو کولی شئ د لاندې لینک څخه د مایکروسافټ وینډوز لپاره د نورستاني (کلښه الا) کیبورډ ډاونلوډ کړئ.",
+    nr: "",
+  },
+  download:{
+    en:"Download",
+    prs:"دانلود",
+    ps:"دانلود",
+    nr:"دانلود",
+  },
+  installationGuide: {
+    en: "Installation Guide",
+    prs: "راهنمای نصب",
+    ps: "د نصب راهنما",
+    nr: "د نصب راهنما",
+  },
 };
 

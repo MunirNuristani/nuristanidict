@@ -8,6 +8,7 @@ import { TiSortAlphabetically } from "react-icons/ti";
 import { useRouter } from "next/router";
 import { useAppContext } from "../../context/AppContext";
 import { phrases } from "../../utils/i18n";
+import Image from "next/image";
 
 function CardContainer() {
   const {
@@ -89,7 +90,7 @@ function CardContainer() {
     {
       title: historicalImages[lan],
       text: historicalImagesInfo[lan],
-      icon: <GiIonicColumn size={50} className="" />,
+      icon: <Image src={"/assets/icons/culture.jpg"} alt="nuristaniIcon" width={70} height={50} className="mix-blend-multiply" />,
       type: "histImage",
       route: "/historicalImages",
     },

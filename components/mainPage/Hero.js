@@ -29,7 +29,6 @@ function MainpageHero() {
               src={logo}
               alt="MTGKCF logo"
               layout="fill"
-              fill={true}
               objectFit="cover"
               objectPosition="center"
               loading="lazy"
@@ -62,7 +61,7 @@ function MainpageHero() {
               src={img}
               alt="Nuristani Carving"
               layout="fill"
-              fill
+          
               objectPosition="center"
               loading="lazy"
               objectFit="contain"
