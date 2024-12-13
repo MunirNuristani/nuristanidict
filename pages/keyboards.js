@@ -3,7 +3,7 @@ import { useAppContext } from "../context/AppContext";
 import LoadingPage from "../components/LoadingPage";
 import { phrases } from "../utils/i18n";
 import Image from "next/image";
-import buttonCSS from "../components/CSS/TailwindCSS";
+
 function Page() {
   const { keyboards, downloadKeyboardText, download, installationGuide } =
     phrases;
@@ -11,8 +11,8 @@ function Page() {
   const [dir, setDir] = useState("");
   const { state, dispatch } = useAppContext();
   const { loadingPage } = state;
-  const lan = typeof window !== "undefined" && localStorage.getItem("lan");
-
+  const lan = typeof window !== "undefined" ? localStorage.getItem("lan") : "en";
+  console.log("langauage", lan);
   useEffect(() => {
     setDir(lan === "en" ? "ltr" : "rtl");
   }, [lan]);
@@ -66,7 +66,7 @@ function Page() {
               <button
                 className={buttonCSS}
                 onClick={() =>
-                  window.open("/assets/guides/Installation_Guide_en.pdf", "_blank")
+                  window.open(`/assets/guides/Installation_Guide_${lan}.pdf`, "_blank")
                 }
               >
                 {installationGuide[lan]}
